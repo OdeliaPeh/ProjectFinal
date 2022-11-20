@@ -123,25 +123,25 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#preparation-of-buildings-layer" id="toc-preparation-of-buildings-layer" class="nav-link" data-scroll-target="#preparation-of-buildings-layer"><strong>2.2 Preparation of Buildings Layer</strong></a>
   <ul class="collapse">
-  <li><a href="#selecting-all-buildings-within-the" id="toc-selecting-all-buildings-within-the" class="nav-link" data-scroll-target="#selecting-all-buildings-within-the">**2.2.1 Selecting all buildings within the</a></li>
+  <li><a href="#selecting-all-buildings-within-the-study-area" id="toc-selecting-all-buildings-within-the-study-area" class="nav-link" data-scroll-target="#selecting-all-buildings-within-the-study-area">2.2.1 Selecting all buildings within the study area</a></li>
   <li><a href="#categorising-buildings-within-the-iso-areas" id="toc-categorising-buildings-within-the-iso-areas" class="nav-link" data-scroll-target="#categorising-buildings-within-the-iso-areas">2.2.2 <strong>Categorising buildings within the iso areas</strong></a></li>
   </ul></li>
   <li><a href="#preparation-of-rail-stations" id="toc-preparation-of-rail-stations" class="nav-link" data-scroll-target="#preparation-of-rail-stations"><strong>2.3 Preparation of Rail Stations</strong></a>
   <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">**2.6.1&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  <li><a href="#extracting-tel-stage-4-stations" id="toc-extracting-tel-stage-4-stations" class="nav-link" data-scroll-target="#extracting-tel-stage-4-stations">2.3.1 Extracting TEL Stage 4 stations</a></li>
   <li><a href="#adding-entrancesexits" id="toc-adding-entrancesexits" class="nav-link" data-scroll-target="#adding-entrancesexits">**2.6.2&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Adding Entrances/Exits</a></li>
   </ul></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">**2.7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">**2.7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
   <ul class="collapse">
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">**2.7.1&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">**2.7.1&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
   <li><a href="#changing-the-interval-size-of-the-iso" id="toc-changing-the-interval-size-of-the-iso" class="nav-link" data-scroll-target="#changing-the-interval-size-of-the-iso">**2.7.2 Changing the interval size of the iso</a></li>
   </ul></li>
   <li><a href="#extracting-buildings-within-the-iso-areas" id="toc-extracting-buildings-within-the-iso-areas" class="nav-link" data-scroll-target="#extracting-buildings-within-the-iso-areas"><strong>2.8 Extracting buildings within the iso areas</strong></a></li>
   <li><a href="#categorising-buildings-within-the-iso" id="toc-categorising-buildings-within-the-iso" class="nav-link" data-scroll-target="#categorising-buildings-within-the-iso">**2.9 Categorising buildings within the iso</a>
   <ul class="collapse">
   <li><a href="#creating-a-new-field-called-class-for" id="toc-creating-a-new-field-called-class-for" class="nav-link" data-scroll-target="#creating-a-new-field-called-class-for">**2.9.1 Creating a new field called class for</a></li>
-  <li><a href="#identifying-buildings-within-the-1" id="toc-identifying-buildings-within-the-1" class="nav-link" data-scroll-target="#identifying-buildings-within-the-1">**2.9.3 Identifying buildings within the</a></li>
-  <li><a href="#categorising-the-buildings-within-the-1" id="toc-categorising-the-buildings-within-the-1" class="nav-link" data-scroll-target="#categorising-the-buildings-within-the-1">**2.9.4 Categorising the buildings within the</a></li>
+  <li><a href="#identifying-buildings-within-the" id="toc-identifying-buildings-within-the" class="nav-link" data-scroll-target="#identifying-buildings-within-the">**2.9.3 Identifying buildings within the</a></li>
+  <li><a href="#categorising-the-buildings-within-the" id="toc-categorising-the-buildings-within-the" class="nav-link" data-scroll-target="#categorising-the-buildings-within-the">**2.9.4 Categorising the buildings within the</a></li>
   <li><a href="#changing-the-colour-scheme-of-the" id="toc-changing-the-colour-scheme-of-the" class="nav-link" data-scroll-target="#changing-the-colour-scheme-of-the">**2.9.5 Changing the colour scheme of the</a></li>
   </ul></li>
   </ul></li>
@@ -202,18 +202,17 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="extracting-roads-except-expressways"><strong>2.1.2 Extracting roads except expressways</strong></h3>
 <p>Under the Layers panel, right click on <strong>roads</strong> –&gt; <strong>Open Attribute Table</strong>.</p>
 <p>Click on <strong>Select features using an expression</strong> icon. The <strong>Select by Expression</strong> dialog window will appear. Under the expression pane, we keyed in the following to select expressways in Singapore:</p>
-<p><strong>"fclass"= 'motorway or "fclass"= 'motorway_link</strong></p>
+<p><strong>“fclass”= ’motorway or “fclass”= ’motorway_link</strong></p>
 <p>In the attribute table, we then clicked on <strong>Invert Selection</strong> so that all the roads except expressways are selected. The selection was then saved.</p>
 </section>
 </section>
 <section id="preparation-of-buildings-layer" class="level2">
 <h2 class="anchored" data-anchor-id="preparation-of-buildings-layer"><strong>2.2 Preparation of Buildings Layer</strong></h2>
 <p>Import the Building Network data(gis_osm_buildings_free_1.shp) into QGIS. The building Network data contains the building network from Malaysia, Brunei and Singapore.</p>
-<section id="selecting-all-buildings-within-the" class="level3">
-<h3 class="anchored" data-anchor-id="selecting-all-buildings-within-the">**2.2.1 Selecting all buildings within the</h3>
-<p>study area**</p>
+<section id="selecting-all-buildings-within-the-study-area" class="level3">
+<h3 class="anchored" data-anchor-id="selecting-all-buildings-within-the-study-area">2.2.1 Selecting all buildings within the study area</h3>
 <p>Using the <strong>Clip</strong> operation of QGIS, extract the building network features that fall with Singapore study area.</p>
-<p>For the Input <strong>layer</strong>, we selected the input layer to clip i.e. gis_osm_roads_buildings_1.shp</p>
+<p>For the Input <strong>layer</strong>, we selected the input layer to clip i.e.&nbsp;gis_osm_roads_buildings_1.shp</p>
 <p>For the Overlay <strong>layer</strong>, we selected the layer that will be used as reference i.e.&nbsp;SG_Subzone</p>
 <p>After clipping, we saved the new clip as <strong>Buildings</strong>.</p>
 </section>
@@ -226,21 +225,19 @@ ul.task-list li input[type="checkbox"] {
 <h4 class="anchored" data-anchor-id="creating-a-new-field-called-class-for-the-buildings-within-the-iso-area"><strong>2.2.2.1 Creating a new field called class for the buildings within the iso area</strong></h4>
 <p>From the attribute table, we clicked on the <strong>toggle editing mode</strong> to create a <strong>New field</strong></p>
 <ul>
-<li><p>For <strong>Name</strong>, type 'class'</p></li>
+<li><p>For <strong>Name</strong>, type ‘class’</p></li>
 <li><p>For <strong>Type</strong>, select Text (string)</p></li>
 <li><p>For <strong>Length</strong>, select 30</p></li>
 <li><p>Click <strong>OK</strong></p></li>
 </ul>
 </section>
-<section id="identifying-buildings-within-the" class="level4">
-<h4 class="anchored" data-anchor-id="identifying-buildings-within-the">**2.2.2.2 Identifying buildings within the</h4>
-<p>iso-areas**</p>
+<section id="identifying-buildings-within-the-iso-areas" class="level4">
+<h4 class="anchored" data-anchor-id="identifying-buildings-within-the-iso-areas">2.2.2.2 Identifying buildings within the iso-areas</h4>
 <p>Import <strong>OpenStreetMap</strong> layer into QGIS.</p>
 <p>Using Google Street view as a reference, we can compare and determine what class each building should be.</p>
 </section>
-<section id="categorising-the-buildings-within-the" class="level4">
-<h4 class="anchored" data-anchor-id="categorising-the-buildings-within-the">**2.2.2.3 Categorising the buildings within the</h4>
-<p>Iso Area**</p>
+<section id="categorising-the-buildings-within-the-iso-area" class="level4">
+<h4 class="anchored" data-anchor-id="categorising-the-buildings-within-the-iso-area">2.2.2.3 Categorising the buildings within the Iso Area</h4>
 <p>Select the buildings to be classed and open the attribute table. Select the <strong>Open field calculator</strong> symbol and check <strong>Update existing field</strong> Click on the dropdown arrow and select <strong>class</strong>, then in the Expression Pane, type the correct class. The classifications we have decided on are:</p>
 <ul>
 <li><p>Private Residential</p></li>
@@ -257,25 +254,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="preparation-of-rail-stations" class="level2">
 <h2 class="anchored" data-anchor-id="preparation-of-rail-stations"><strong>2.3 Preparation of Rail Stations</strong></h2>
-<p>Using the steps learnt from the previous section, import Rail Stations data(master-plan-2019-rail-station-layer) into QGIS. The rail stations data contains the all the MRT station in Singapore.</p>
-<p>&nbsp;</p>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section">**2.6.1&nbsp;&nbsp;&nbsp;&nbsp;</h3>
-<p>Extracting TEL Stage 4 stations**</p>
-<p>a)&nbsp;&nbsp;&nbsp; Under the Layers panel, right click on <strong>G_MP19_RAIL_STN_PL</strong>à <strong>Open Attribute Table</strong></p>
-<p>![Table</p>
-<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image038.png){alt=“Table</p>
-<p>Description automatically generated”}</p>
-<p>b)&nbsp;&nbsp;&nbsp; Click on <strong>Select features using an expression</strong> ![A picture containing text</p>
-<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image039.jpg){alt=“A picture containing text</p>
-<p>Description automatically generated”}&nbsp;icon. The <strong>Select by Expression</strong> dialog window will appear.</p>
-<p>c)&nbsp;&nbsp;&nbsp;&nbsp; At the upper left corner of the window, click on the <strong>Expression</strong> tab.</p>
-<p>ii.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Under the expression pane, key in the following:</p>
+<p>Import Rail Stations data(master-plan-2019-rail-station-layer) into QGIS. The rail stations data contains the all the MRT station in Singapore.</p>
+<section id="extracting-tel-stage-4-stations" class="level3">
+<h3 class="anchored" data-anchor-id="extracting-tel-stage-4-stations">2.3.1 Extracting TEL Stage 4 stations</h3>
+<p>Under the Layers panel, right click on <strong>G_MP19_RAIL_STN_PL</strong> –&gt; <strong>Open Attribute Table</strong>.</p>
+<p>Click on <strong>Select features using an expression</strong> and key in the following query statement:</p>
 <p><strong>“Name”&nbsp; =&nbsp; ‘FOUNDERS’’ MEMORIAL’ or&nbsp; “Name”&nbsp; =&nbsp; ‘TANJONG RHU’ or&nbsp; “Name”&nbsp; = &nbsp;‘KATONG PARK’ or&nbsp; “Name”&nbsp; =&nbsp; ‘TANJONG KATONG’ or&nbsp; “Name”&nbsp; =&nbsp; ‘MARINE PARADE’ or&nbsp; “Name”&nbsp; =&nbsp; ‘MARINE TERRACE’ or&nbsp; “Name”&nbsp; =&nbsp; ‘SIGLAP’ or&nbsp; “Name”&nbsp; =&nbsp; ‘BAYSHORE’</strong></p>
-<p>The query statement in the Expression pane should look similar to this.</p>
-<p>![Graphical user interface, application</p>
-<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image041.png){alt=“Graphical user interface, application</p>
-<p>Description automatically generated”}</p>
 <p>d)&nbsp;&nbsp;&nbsp; &nbsp;Click on <strong>Select Features</strong> button and then <strong>close</strong> the window.</p>
 <p>e)&nbsp;&nbsp;&nbsp; Using the steps learnt in the previous sections, <strong>save the selected features</strong> in a new GIS file which is in GeoPackage format. Call the layer <strong>TEL4_stations</strong> . The layer should look similar to this.</p>
 <p>f)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next, remove the original <em>G_MP19_RAIL_STN_PL</em> layer from the QGIS project.</p>
@@ -311,17 +295,17 @@ ul.task-list li input[type="checkbox"] {
 <p>b)&nbsp;&nbsp; Click on the Add Point Feature ![Icon</p>
 <p>Description automatically generated with medium confidence](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image047.png){alt=“Icon</p>
 <p>Description automatically generated with medium confidence”}</p>
-<p>c)&nbsp;&nbsp;&nbsp; Using the station picture in Figure 1 of Founders' Memorial in <a href="https://www.lta.gov.sg/content/ltagov/en/upcoming_projects/rail_expansion/thomson_east_coast_line.html">LTA website</a> as a reference, manually click on the Founders memorial polygon to add the points.</p>
+<p>c)&nbsp;&nbsp;&nbsp; Using the station picture in Figure 1 of Founders’ Memorial in <a href="https://www.lta.gov.sg/content/ltagov/en/upcoming_projects/rail_expansion/thomson_east_coast_line.html">LTA website</a> as a reference, manually click on the Founders memorial polygon to add the points.</p>
 <p>![Diagram</p>
 <p>Description automatically generated with low confidence](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image049.png){alt=“Diagram</p>
 <p>Description automatically generated with low confidence”}</p>
 <p>Figure 1</p>
 <p>d)&nbsp;&nbsp; A dialog window will appear.</p>
-<p>e)&nbsp;&nbsp; For <strong>id</strong>, type <strong>1</strong>. For <strong>STN_N</strong>, type <strong>FOUNDERS' MEMORIAL</strong>. For <strong>EXIT_N</strong> , type <strong>1</strong>.</p>
+<p>e)&nbsp;&nbsp; For <strong>id</strong>, type <strong>1</strong>. For <strong>STN_N</strong>, type <strong>FOUNDERS’ MEMORIAL</strong>. For <strong>EXIT_N</strong> , type <strong>1</strong>.</p>
 <p>![Graphical user interface, application</p>
 <p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image051.png){alt=“Graphical user interface, application</p>
 <p>Description automatically generated”}</p>
-<p>f)&nbsp;&nbsp;&nbsp;&nbsp; For the second exit, for id, type 2. For <strong>STN_N</strong>, type <strong>FOUNDERS' MEMORIAL.</strong> For <strong>EXIT_N</strong> , type <strong>2</strong>.</p>
+<p>f)&nbsp;&nbsp;&nbsp;&nbsp; For the second exit, for id, type 2. For <strong>STN_N</strong>, type <strong>FOUNDERS’ MEMORIAL.</strong> For <strong>EXIT_N</strong> , type <strong>2</strong>.</p>
 <p>g)&nbsp;&nbsp; Click on the toggle editing mode.</p>
 <p>![Text</p>
 <p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image053.png){alt=“Text</p>
@@ -339,15 +323,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 </section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1">**2.7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section">**2.7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
 <p>Preparation of ISO-AREAS of 800m with contour lines of 200m**</p>
 <p>Now we will be implementing <strong>Iso-Area as Polygons (from Layer)</strong> as a way to delineate the catchment areas to derive the accessibility to the TEL Stage 4 MRT stations</p>
 <p>&nbsp;</p>
-<section id="section-2" class="level3">
-<h3 class="anchored" data-anchor-id="section-2">**2.7.1&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+<section id="section-1" class="level3">
+<h3 class="anchored" data-anchor-id="section-1">**2.7.1&nbsp;&nbsp;&nbsp;&nbsp;</h3>
 <p>Creating ISO AREAS**</p>
-<p>DIY: Using the steps learnt previously, select the entrance/exit points of FOUNDERS' MEMORIAL</p>
+<p>DIY: Using the steps learnt previously, select the entrance/exit points of FOUNDERS’ MEMORIAL</p>
 <p>a)&nbsp;&nbsp; In the menu bar, go to <strong>Processing</strong>à<strong>toolbox</strong>.</p>
 <p>b)&nbsp;&nbsp; In toolbox, click on the dropdown arrow beside <strong>QNEAT3</strong></p>
 <p>c)&nbsp;&nbsp;&nbsp; Click on the dropdown arrow beside <strong>Iso-Areas</strong>.</p>
@@ -412,7 +396,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="extracting-buildings-within-the-iso-areas" class="level2">
 <h2 class="anchored" data-anchor-id="extracting-buildings-within-the-iso-areas"><strong>2.8 Extracting buildings within the iso areas</strong></h2>
-<p>Do not use clipped as the buildings may get 'chopped' off</p>
+<p>Do not use clipped as the buildings may get ‘chopped’ off</p>
 <p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; From the menu bar, select the <strong>Select by Location</strong> ![A picture containing graphical user interface</p>
 <p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image073.png){alt=“A picture containing graphical user interface</p>
 <p>Description automatically generated”}</p>
@@ -428,7 +412,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image075.png){alt=“Graphical user interface</p>
 <p>Description automatically generated”}</p>
 <p>&nbsp;</p>
-<p>When you're ready, click on the <strong>Run</strong> button</p>
+<p>When you’re ready, click on the <strong>Run</strong> button</p>
 <p>Once done, click on <strong>Close</strong></p>
 <p>&nbsp;</p>
 <p>Your screen should look similar to this.</p>
@@ -461,7 +445,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Description automatically generated”}</p>
 <p>&nbsp;</p>
 <p>New field dialog window appears</p>
-<p>For <strong>Name</strong>, type 'class'</p>
+<p>For <strong>Name</strong>, type ‘class’</p>
 <p>For <strong>Type</strong>, select Text (string)</p>
 <p>For <strong>Length</strong>, select 30</p>
 <p>![Graphical user interface, text, application</p>
@@ -479,8 +463,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Click on the <strong>toggle editing mode</strong> again to <strong>save</strong>.</p>
 <p>&nbsp;</p>
 </section>
-<section id="identifying-buildings-within-the-1" class="level3">
-<h3 class="anchored" data-anchor-id="identifying-buildings-within-the-1">**2.9.3 Identifying buildings within the</h3>
+<section id="identifying-buildings-within-the" class="level3">
+<h3 class="anchored" data-anchor-id="identifying-buildings-within-the">**2.9.3 Identifying buildings within the</h3>
 <p>iso-areas**</p>
 <p>&nbsp;</p>
 <p>Import <strong>OpenStreetMap</strong> layer into QGIS</p>
@@ -494,11 +478,11 @@ ul.task-list li input[type="checkbox"] {
 <p>Figure 3</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p>Using google street view as a reference as depicted in figure 3, one can say that the buildings that are in Costa Rhu that are within the iso area of Founders' Memorial are <strong>Private residences</strong>.</p>
+<p>Using google street view as a reference as depicted in figure 3, one can say that the buildings that are in Costa Rhu that are within the iso area of Founders’ Memorial are <strong>Private residences</strong>.</p>
 <p>&nbsp;</p>
 </section>
-<section id="categorising-the-buildings-within-the-1" class="level3">
-<h3 class="anchored" data-anchor-id="categorising-the-buildings-within-the-1">**2.9.4 Categorising the buildings within the</h3>
+<section id="categorising-the-buildings-within-the" class="level3">
+<h3 class="anchored" data-anchor-id="categorising-the-buildings-within-the">**2.9.4 Categorising the buildings within the</h3>
 <p>Iso Area**</p>
 <p>a)&nbsp;&nbsp;&nbsp; Using the steps learnt earlier, select the buildings in the blue circle as shown in Figure 2.</p>
 <p>b)&nbsp;&nbsp;&nbsp; Using the steps learnt earlier, open the attribute table of FM_buildings layer</p>
@@ -507,7 +491,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Description automatically generated”}</p>
 <p>d)&nbsp;&nbsp;&nbsp; Check the <strong>Update existing field</strong></p>
 <p>e)&nbsp;&nbsp;&nbsp; Click on the dropdown arrow and select <strong>class</strong></p>
-<p>f)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In the Expression Pane, type <strong>'Private Residential'</strong></p>
+<p>f)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In the Expression Pane, type <strong>‘Private Residential’</strong></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -548,7 +532,7 @@ ul.task-list li input[type="checkbox"] {
 <p>&nbsp;</p>
 <p>DIY: Using the steps learnt previously, i.e.&nbsp;<strong>identifying, categorising and changing the colour scheme</strong>, repeat the steps on the remaining buildings that falls within the other iso areas.</p>
 <p>&nbsp;</p>
-<p>Note: The only <strong>values</strong> that <strong>class</strong> will take are: '<strong>Private</strong> <strong>Residential</strong>' &nbsp;, '<strong>Business'</strong> , '<strong>Civic'</strong> , '<strong>Education'</strong> , '<strong>Others'</strong> , '<strong>Public</strong> <strong>Residential'</strong> and '<strong>Religious'</strong></p>
+<p>Note: The only <strong>values</strong> that <strong>class</strong> will take are: ‘<strong>Private</strong> <strong>Residential</strong>’ &nbsp;, ‘<strong>Business’</strong> ,’<strong>Civic’</strong> , ‘<strong>Education’</strong> ,’<strong>Others’</strong> , ‘<strong>Public</strong> <strong>Residential’</strong> and’<strong>Religious’</strong></p>
 <p>Note: When changing their colour schemes, assign the values of the class to the following colours as per Figure 4</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
