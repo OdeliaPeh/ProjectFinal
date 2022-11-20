@@ -17,7 +17,7 @@ A more credible and realistic approach to delineate the catchment area would be 
 
 In reality, a person cannot always travel in a straight line towards their destination but will have to turn at bends and curves depending on their walking paths.
 
-# 1.0: Data Collection
+# 1.0 Data Collection
 
 ## **1.1 Downloading geospatial data**
 

@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Group 10 - Analysis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Group 10</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html">Overview</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./methods.html">Methodology</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./analysis.html" aria-current="page">Analysis</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./conclusion.qmd">Conclusions</a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./people.html">The Team</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#methods-and-recommendations" id="toc-methods-and-recommendations" class="nav-link active" data-scroll-target="#methods-and-recommendations">Methods and Recommendations</a></li>
+  <li><a href="#te22a-founders-memorial" id="toc-te22a-founders-memorial" class="nav-link" data-scroll-target="#te22a-founders-memorial">TE22A: Founder’s Memorial</a></li>
+  <li><a href="#te23-tanjong-rhu" id="toc-te23-tanjong-rhu" class="nav-link" data-scroll-target="#te23-tanjong-rhu">TE23: Tanjong Rhu</a></li>
+  <li><a href="#te24-katong-park" id="toc-te24-katong-park" class="nav-link" data-scroll-target="#te24-katong-park">TE24: Katong Park</a></li>
+  <li><a href="#te25-tanjong-katong" id="toc-te25-tanjong-katong" class="nav-link" data-scroll-target="#te25-tanjong-katong">TE25: Tanjong Katong</a></li>
+  <li><a href="#te26-marine-parade" id="toc-te26-marine-parade" class="nav-link" data-scroll-target="#te26-marine-parade">TE26: Marine Parade</a></li>
+  <li><a href="#te27-marine-terrace" id="toc-te27-marine-terrace" class="nav-link" data-scroll-target="#te27-marine-terrace">TE27: Marine Terrace</a></li>
+  <li><a href="#te28-siglap" id="toc-te28-siglap" class="nav-link" data-scroll-target="#te28-siglap">TE28: Siglap</a></li>
+  <li><a href="#te29-bayshore" id="toc-te29-bayshore" class="nav-link" data-scroll-target="#te29-bayshore">TE29: Bayshore</a></li>
+  <li><a href="#citations" id="toc-citations" class="nav-link" data-scroll-target="#citations">Citations</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Analysis</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="methods-and-recommendations" class="level2">
+<h2 class="anchored" data-anchor-id="methods-and-recommendations">Methods and Recommendations</h2>
+<p>For our analysis, our group will be analysing both the target audience served and the efficiency of each TEL stage 4 individually.</p>
+<p>To analyse the target audience served, our group analyzed the type of buildings and residents living within each walkable iso-area created. We then gathered information about the cost of construction and population’s utilization of within each MRT Station to determine whether the cost of development outweighs its benefits to taxpayers and if there is sufficient utilization of MRT services to justify the construction of the MRT Station. We have also taken into consideration future developments that will take place within each area before arriving at our decision.</p>
+<p>To measure the efficiency, our group has come up with a calculation to measure the efficiency, which we have dubbed the walkability probability. To do this, we first find the ratio of buildings in each iso-area band compared to the total number of buildings in the iso-area. To simplify the process, we assumed that the closest point to the MRT station would be considered. For instance, if building A spans both the 200 – 400m band and the 400 – 600m band, we would assume that it was part of the 200 – 400m band.</p>
+<p>Next, our group took reference from Olszewski and Wibowo (2005)&nbsp;to determine the penalisation score for each band. The penalisation score is used to calculate the expected likelihood of a person walking to the MRT station. As Figure 1 shows, men and women have different probabilities of walking to the MRT. Hence, our group has taken the approximate average of the two probabilities and applied it as the penalisation score.</p>
+<p><img src="images/report%20graph-01.jpg" class="img-fluid"></p>
+<p><em>Note</em>: Graph depicting the probability of walking to MRT as a function of difference in walking distance between walk and feeder modes. From “Using equivalent walking distance to assess pedestrian accessibility to transit stations in Singapore” by Olszewski, P., &amp; Wibowo, S. S., 2005, <em>Transportation Research Record: Journal of the Transportation Research Board, 1927(1), 38–45.</em></p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Iso-area band range</th>
+<th>Penalty</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0-200m</td>
+<td>0.9</td>
+</tr>
+<tr class="even">
+<td>200-400m</td>
+<td>0.8</td>
+</tr>
+<tr class="odd">
+<td>400-600m</td>
+<td>0.6</td>
+</tr>
+<tr class="even">
+<td>600-800m</td>
+<td>0.4</td>
+</tr>
+</tbody>
+</table>
+<p>The expected likelihood of people walking would be derived through this formula:</p>
+<p>No of buildings in Iso-area band _____________________________________ x Penalty</p>
+<p>Total number of buildings in iso-area</p>
+<p>After which, the expected likelihood of people walking would be added across all bands and from there, the total walkability probability would be derived.We will consider an MRT station to be efficient if it has a walkability probability of over 50%. Afterwards, we will consider any possible outside factors which could reduce the effectiveness of the MRT station.Using this calculation, our group will not only be able to calculate the expected efficiency of each MRT station according to the probability that someone will walk to the station, or the walkability probability, but we will also be able to analyse the proportion of buildings in each band and identify the band with the highest walkability probability.</p>
+</section>
+<section id="te22a-founders-memorial" class="level2">
+<h2 class="anchored" data-anchor-id="te22a-founders-memorial">TE22A: Founder’s Memorial</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-691A473F.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<section id="background" class="level4">
+<h4 class="anchored" data-anchor-id="background">Background</h4>
+<p>Located between Tanjong Rhu and Gardens by the Bay stations along the TEL, Founders Memorial MRT station was meant to improve accessibility for visitors to the Bay East Garden, where the memorial will be located. The station is built to serve expected upcoming residential and recreational developments in the area and showcase the contributions of modern Singapore’s founders.</p>
+<p>The China Railway First Group Co, Ltd was awarded the contract of S$242.4 million in June 2016 for the conversion of the existing TEL facility building at Bay East Garden to build the Founders’ Memorial Station, where construction begins in 2019.</p>
+<p>With future development plan to be completed in 2025, the memorial site will be housed in a garden, within which an indoor gallery will be built. There will likely be permanent and temporary galleries, as well as a visitor center and multi-purpose rooms which could host school excursions and citizenship ceremonies.</p>
+</section>
+<section id="target-audience" class="level4">
+<h4 class="anchored" data-anchor-id="target-audience">Target Audience</h4>
+<p>The expected target audience of the Founder’s Memorial is likely to be visitors, school students, small group of private residences and for ceremonies purposes. As clear plans for development of the area have not yet been planned, it is remains unclear the exact future target audience, such as residential buildings or commercial buildings.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-258F4FCA.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Nonetheless, at the current moment there are some private residences which fall within the iso-area created. 67% of all buildings which fall within the iso-area are private residential buildings. With reference to Google Street View, we can see that these buildings are condominiums within Tanjong Rhu, which lies across East Coast Parkway.</p>
+<p><img src="images/paste-4DD4C089.png" class="img-fluid" width="317"><img src="images/paste-887FB9D5.png" class="img-fluid" width="186"></p>
+</section>
+<section id="efficiency" class="level4">
+<h4 class="anchored" data-anchor-id="efficiency">Efficiency</h4>
+<p>Based on current developments in the area, we have calculated the following:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Screenshot%202022-11-20%20at%202.17.59%20PM.png" class="img-fluid figure-img" width="553"></p>
+</figure>
+</div>
+<p>From the calculations, we can see that at the current state of development at Founders’ Memorial, the station has a poor walkability probability of 43.33%, which is the lowest out of all stations analysed and below the threshold set by our group. Furthermore, the greatest proportion of buildings within the station’s iso-area is within the furthest band, which also has the highest walkability probability. This indicates poor planning for the current developments in the area, with buildings being served lying far from the station where riders are least likely to walk to the station. This is further impacted by fact that the residential buildings within the iso-area are within the affluent Tanjong Rhu area, where residents are likely accustomed to using cars as their main form of transportation.</p>
+<p>Additionally, the walkability probability has an inverse relationship from the curve that Olszewski and Wibowo (2005) had plotted and further points to the poor location of the station as in reality less people are likely to be willing to walk to the MRT station.</p>
+<p>At the current stage, we can conclude that Founder’s Memorial will not be efficient once built. However, considering that the area is expected to be developed in the future with the expiration of the Marina Bay Golf Course’s lease, we may see a better efficiency rating in the future.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-F58D275A.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="cost-to-benefit-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="cost-to-benefit-analysis">Cost to Benefit Analysis</h4>
+<p>The MRT station’s iso-area currently consists of only a few of private residences. LTA had contracted China Railway First Group with a S$242.4 million contract to build Founders Memorial MRT station. At the current stage of development, Founders Memorial MRT station is not cost effective, as its poor efficiency does not justify the amount taxpayers would have to pay for the development of the area.</p>
+</section>
+<section id="future-developments" class="level4">
+<h4 class="anchored" data-anchor-id="future-developments">Future Developments</h4>
+<p>However, at Marina East area also features the Marina Bay Golf Course, which will see its lease expiring in July 2024, upon which the government take would back the land. It will be likely the area would be put up for tender. With construction time taking up to three years, it is expected that the area could be developed as a mix of residential and commercial projects over a gradual developmental period of 10-15 years. However, URA does not have any clear plans for development of the area due to the area being marked as a reserved site.</p>
+</section>
+<section id="recommendations" class="level4">
+<h4 class="anchored" data-anchor-id="recommendations">Recommendations</h4>
+<p>In policy making, once the government has initiated and legitimise the development of the MRT station project with a private partnership contract, it is unlikely that any changes would be made with existing plans to develop the MRT station. If the MRT station is completed and commuter utilisation is low, the cost of maintaining the station and it services would become a recurrent cost on public expenditure.</p>
+<p>Hence, we strongly suggest that the government continue its plan to develop the area and consult with other stakeholders such as HDB, URA and private companies who are interested in tendering or leasing. This is to ensure that the MRT station is built with efficiency in mind and takes into consideration public utilisation and demand within the iso-area of Founders Memorial MRT Station. Otherwise, it will become a project that is poorly planned.</p>
+</section>
+</section>
+<section id="te23-tanjong-rhu" class="level2">
+<h2 class="anchored" data-anchor-id="te23-tanjong-rhu">TE23: Tanjong Rhu</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-02BE5351.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<section id="background-1" class="level4">
+<h4 class="anchored" data-anchor-id="background-1">Background</h4>
+<p>The construction of Tanjong Rhu MRT station has been awarded to Bachy Soletanche Singapore Pte Ltd – Wai Fong Construction Pte Ltd Joint Venture at a contract sum of approximately S$294 million (LTA, 2016). Construction has started in 2016 and will be completed and operational in 2024. From Google Maps, it will primarily serve residents living in condominiums such as Casuarina Cove and Tanjong Ria.</p>
+<p>On 15 August 2014, LTA proposed that Tanjong Rhu station would be part of Thomson–East Coastline (TEL) and is expected to be completed in 2024.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-5264F1E5.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p><img src="images/paste-CF71C6BD.png" class="img-fluid" width="260"></p>
+<p><img src="images/paste-C1804E7B.png" class="img-fluid" width="271"></p>
+<p><img src="images/paste-96AA7DEE.png" class="img-fluid" width="240"></p>
+<p><img src="images/paste-3AF77BCB.png" class="img-fluid" width="228"></p>
+</section>
+<section id="target-audience-1" class="level4">
+<h4 class="anchored" data-anchor-id="target-audience-1">Target Audience</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-BB86019C.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>As shown from the pie chart and with reference from Google Street View, the vicinity of Tanjong Rhu MRT station largely comprises of Private Residences at 72% of all buildings. These private residences mainly comprise of condominiums such as Casuarina Cove. Therefore, it can be said that Tanjong Rhu will be mainly serving the middle to high class.</p>
+</section>
+<section id="efficiency-1" class="level4">
+<h4 class="anchored" data-anchor-id="efficiency-1">Efficiency</h4>
+<p>Based on current developments in the area, we have calculated the following:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Screenshot%202022-11-20%20at%202.28.59%20PM.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>From the calculations, we can see that Tanjong Rhu has a high Walkability Probability at 70.62%, which is also the highest out of all stations. This can be attributed to the 200 – 400m band having the greatest proportion of buildings and the highest expected likelihood of people who will walk to the MRT station. This indicates that Tanjong Rhu MRT station will be highly efficient when it opens.</p>
+<p>However, considering the characteristics of the neighborhood around the station, it is quite likely that Tanjong Rhu MRT station will not achieve this calculated efficiency at launch as it will take some time for possible riders to change their habits towards using public transportation. Thus, we can conclude that while the station is likely to be highly efficient, it will take time to reach a moderate to high efficiency due to the characteristics of the area.</p>
+</section>
+<section id="cost-benefit-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="cost-benefit-analysis">Cost Benefit Analysis</h4>
+<p>At an initial observation, it may seem that Tanjong Rhu’s cost of S$294 million is not justified because their target audience are mainly the residents staying in private residential. The cost would only seem justifiable when a wider range of the public is served not just private residential or if the MRT station manages to serve a higher population density. However, one must note that condominiums are like HDBs in terms of the quantity of people they serve. Both have high population densities as opposed to landed properties. Therefore, the cost of Tanjong Rhu MRT station is justified to a certain extent.</p>
+</section>
+<section id="future-developments-1" class="level4">
+<h4 class="anchored" data-anchor-id="future-developments-1">Future Developments</h4>
+<p>It can be seen from the URA master plan 2019 that Kallang, which is near Tanjong Rhu, will have new additions in terms of facilities for the residents to enjoy. Facilities such as Kallang Alive and Kampong Bugis will provide amenities such as a sports area and waterfront park for people to enjoy. It is also expected to serve not just the Kallang residents but also Tanjong Rhu residents. Therefore, building a Tanjong Rhu MRT station would make these facilities more accessible to the resident of Tanjong Rhu who would want to travel to Kallang to enjoy.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-45B43BDD.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="te24-katong-park" class="level2">
+<h2 class="anchored" data-anchor-id="te24-katong-park">TE24: Katong Park</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-B08D1235.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<section id="background-2" class="level4">
+<h4 class="anchored" data-anchor-id="background-2">Background</h4>
+<p>On 15 August 2014, LTA proposed that Katong Park Station would be part of Thomson–East Coastline (TEL) and is expected to be completed in 2024. Shanghai Tunnel Engineering Co.&nbsp;(Singapore) Pte Ltd was awarded the contract to design and build the Katong Park MRT Station at a sum of S$293 million, and construction has started in 2016. It is built underneath Meyer Road, at the junction of Fort Road and Tanjong Rhu Road, to bring rail connectivity to condominiums and landed houses around Meyer Road.</p>
+</section>
+<section id="target-audience-2" class="level4">
+<h4 class="anchored" data-anchor-id="target-audience-2">Target Audience</h4>
+<p>Katong Park Station’s main target audience is to serve private residences living in mainly low-rise private residential buildings with smaller clusters of condominiums. There is also little development within the area beyond private residential buildings at the current moment.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-86915CA4.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Based on the pie chart and with reference to Google Streetview, we can observe that a large proportion of buildings are low-rise private residential buildings with smaller clusters of condominiums. It would suggest that the area of Katong Park has a lower population density and hence population compared to areas where there are high-rise buildings such as HDB flats and condominiums. This in theory would mean a lower utilisation of MRT services.</p>
+<p>Our analysis also suggests that the building of Katong Park MRT Station will have a slightly lower cost effectiveness and efficiency in comparison to other regions where there is high rise HDB flats where utilisation could be significantly higher.</p>
+<p>With reference from Map view and Streetview on Google Map, we can confirm that a large proportion of buildings are a mix of low-rise private properties and small clusters of condominiums along the Katong Park MRT Station.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-287E40AD.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p><img src="images/paste-EFF3CE06.png" class="img-fluid" width="238"></p>
+<p><img src="images/paste-DD81A4DF.png" class="img-fluid" width="242"></p>
+<p><img src="images/paste-56971BE6.png" class="img-fluid" width="261"><img src="images/paste-19A1CADD.png" class="img-fluid" width="254"></p>
+<p><img src="images/paste-6232CF77.png" class="img-fluid" width="242"><img src="images/paste-0B0F57BA.png" class="img-fluid" width="242"></p>
+</section>
+<section id="efficiency-2" class="level4">
+<h4 class="anchored" data-anchor-id="efficiency-2">Efficiency</h4>
+<p>Based on current developments in the area, we have calculated the following:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Screenshot%202022-11-20%20at%202.40.53%20PM.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>From the calculation, we can see that Katong Park MRT station has a decent Walkability Probability of 54.28%, which implies that the majority of possible riders in the area are willing to walk to the MRT station. While it does not have the best Walkability Probability score, it is passable and likely to increase over time.</p>
+<p>However, the walkability probability has an inverse relationship from the curve that Olszewski and Wibowo (2005) had plotted. This implies that in reality less potential users would walk to the station than calculated due to the distance, as band with the greatest proportion of buildings is the band furthest away from the MRT station, where the penalty is 0.4. This is compounded by the characteristics of the area, with 86% of buildings being private residential buildings and hence residents are likely used to using the car as their main form of transportation.</p>
+<p>We can conclude that Katong Park MRT station, despite the Walkability Probability calculation labelling it as effective, is likely to have a real effectiveness below 50% due to the characteristics of the area and the distance away from the band with the largest proportion of buildings.</p>
+</section>
+<section id="cost-to-benefit-analysis-1" class="level4">
+<h4 class="anchored" data-anchor-id="cost-to-benefit-analysis-1">Cost to Benefit Analysis</h4>
+<p>The iso-area of the MRT station contains mainly of low-rise private residential buildings with smaller clusters of condominiums. This could make the MRT station less effective due to lower utilisation and ridership because of the low population density. The cost of development contracted by Shanghai Tunnel Engineering Co.&nbsp;(Singapore) Pte Ltd with a S$293 million contract to build is still slightly high in consideration of the population density. Justifying that taxpayers would have to pay for the development of the area may be difficult as few would benefit from the MRT station. However, if there are future developments of high-rise condominiums, it would make the project more viable by generating a higher utilisation of MRT services.</p>
+</section>
+<section id="future-developments-2" class="level4">
+<h4 class="anchored" data-anchor-id="future-developments-2">Future developments</h4>
+<p>Within the area of Katong Park there are clusters of high-rise condominiums that are under construction or planned for construction. In future, when more developments are complete, there could be higher utilisation of services as new flat owners move in to start their families within the area.</p>
+</section>
+<section id="recommendations-1" class="level4">
+<h4 class="anchored" data-anchor-id="recommendations-1">Recommendations</h4>
+<p>Within the area, there is a lack of development of HDB Flats. The distribution of residential buildings within most of the TEL Stage 4 Lines are mostly low-rise private residential according to our data. It suggests a great issue of equity and disparity between the affluent population living within the east region of Singapore compared to other regions where HDBs are a common sight.</p>
+<p>The reason why there are few developments within the area is because existing low-rise private properties are taking up a lot of space within Katong Park area. At the current moment, the lack of space in the area makes it impossible for new developments to occur unless the government decides to reclaim the land after the lease expires to make way for new developments.</p>
+</section>
+</section>
+<section id="te25-tanjong-katong" class="level2">
+<h2 class="anchored" data-anchor-id="te25-tanjong-katong">TE25: Tanjong Katong</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-A7B1615C.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<section id="background-3" class="level4">
+<h4 class="anchored" data-anchor-id="background-3">Background</h4>
+<p>On 15 August 2014, LTA proposed that Tanjong Katong station would be part of Thomson–East Coastline (TEL) and is expected to be completed in 2024.</p>
+<p>On 21 March 2016, LTA had awarded the contract to Woh Hup (Private) Limited at a sum of S$146 million for the design and construction of Tanjong Katong MRT Station, and it is expected to be complete in 2024.</p>
+</section>
+<section id="target-audience-3" class="level4">
+<h4 class="anchored" data-anchor-id="target-audience-3">Target Audience</h4>
+<p>Tanjong Katong MRT Station’s main target audience are private residents living in mainly high-rise condominiums and low-rise private residential buildings, with a small number of public residents living in HDB Flats.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-C437DF22.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Based on data and Google Maps, a large proportion of 86% building are clusters of high-rise condominiums and large numbers of low-rise private residential buildings within the iso-area of the MRT station, with the remaining 3% being a small cluster of high-rise HDB flats. This suggests that there would a relatively good utilisation of Marine Terrace MRT services as there are a good mix of high and low population density buildings, which could in theory suggest that there are more residents utilizing the MRT station due to the larger population.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-30EB63F4.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p><img src="images/paste-7AC13456.png" class="img-fluid" style="width:7.3cm"></p>
+<p><img src="images/paste-2C844D0B.png" class="img-fluid" width="265"></p>
+<p><img src="images/paste-31B45523.png" class="img-fluid" width="271"></p>
+<p><img src="images/paste-A3C74C05.png" class="img-fluid" width="268"></p>
+<p><img src="images/paste-7989A4AC.png" class="img-fluid" width="271"></p>
+<p><img src="images/paste-30E024BA.png" class="img-fluid" width="258"></p>
+<p><img src="images/paste-8888536D.png" class="img-fluid" width="269"></p>
+<p><img src="images/paste-EBB34666.png" class="img-fluid" width="265"></p>
+</section>
+<section id="efficiency-3" class="level4">
+<h4 class="anchored" data-anchor-id="efficiency-3">Efficiency</h4>
+<p>Based on current developments in the area, we have calculated the following:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Screenshot%202022-11-20%20at%202.50.50%20PM.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>From the calculation, we can see that Tanjong Katong MRT station will be efficient, with a Walkability Probability of 58.36%, which implies that most possible riders are willing to walk to the station.</p>
+<p>However, the band with the largest proportion of buildings within the walkable iso-area is the band furthest away from the MRT station at 600 – 800m. With a penalty score of 0.4, it implies that in reality most users would not walk to the MRT station. Additionally, as private residential buildings take up the bulk of properties in the iso-area, it would take time for residents in the area to get into the habit of using public transportation. Nonetheless, with a Walkability Probability approaching 60%, these factors are unlikely to push the actual efficiency below 50%.</p>
+<p>Thus, we can conclude that Tanjong Katong MRT station is efficient, although it may take some time to ramp up to acceptable levels.</p>
+</section>
+<section id="cost-to-benefit-analysis-2" class="level4">
+<h4 class="anchored" data-anchor-id="cost-to-benefit-analysis-2">Cost to Benefit Analysis</h4>
+<p>The Tanjong Katong MRT station iso-area contains mainly clusters of high-rise condominiums and many low-rise private residential buildings. This suggests that there could be higher utilisation and ridership. This makes the cost of development of S$146 million highly justifiable with consideration of the reasonable population density and size within the area.</p>
+</section>
+<section id="recommendations-long-term-contracts-and-risk" class="level4">
+<h4 class="anchored" data-anchor-id="recommendations-long-term-contracts-and-risk">Recommendations, Long-Term Contracts and Risk</h4>
+<p>However significant consideration would have to have been taken place prior to the contract to ensure that a smaller company could deliver on its promise based on the Design, Build, Finance and Operate (DBFO) concept in long term contractual agreements.</p>
+<p>In governmental and private partnership contracts, LTA and SMRT would have to undertake considerable and unpredictable risk in the contract to monitor and oversee the contractual agreement to ensure the successful delivery of the stages of development. As compared to a larger firm like Samsung, China Railway or Shanghai Tunnel Engineering, which would have technological and engineering capacity to carry out such a large-scale project and have contractual insurance for a liability coverage.</p>
+<p>In summary, although Tanjong Katong MRT Station is very economical and efficient (serving a good mix of high-rise and low-rise private properties with a decent Walkability Probability), there are significant risks being undertaken by LTA. In the event of a long-term project failure, a large portion of responsibility would be borne by the government who manages taxpayers’ money to fund these projects and would result in huge reputational damage. Hence, LTA would need to have good oversight of the project</p>
+</section>
+</section>
+<section id="te26-marine-parade" class="level2">
+<h2 class="anchored" data-anchor-id="te26-marine-parade">TE26: Marine Parade</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-BED7AB51.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<section id="background-4" class="level4">
+<h4 class="anchored" data-anchor-id="background-4">Background</h4>
+<p>On 15 August 2014, the Land Transport Authority (LTA) proposed that Marine Parade station would be part of Thomson–East Coastline (TEL) and is expected to be completed in 2024.</p>
+<p>In November 2015, Samsung C&amp;T Corporation was contracted a sum of S$555 million for the design and construction of Marine Parade Station. To facilitate the station’s construction, there was disruptions along junctions between Joo Chiat Road and Marine Parade Road that had to be closed from 9 April to 12 November 2017.</p>
+</section>
+<section id="target-audience-4" class="level4">
+<h4 class="anchored" data-anchor-id="target-audience-4">Target audience</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-663D6749.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Based on data and Google Streetview, it suggests that a large proportion of 59.19% of buildings are low-rise private residential buildings, which could suggest that Marine Parade MRT is likely serving a richer class of individuals that owns landed properties. It would also suggest that utilisation of MRT services may be less compared to areas where there are high people density buildings such as HDB flats. This in theory could suggests that there are less residence utilising the MRT station if a large proportion of population consist of mainly low-rise private residential buildings. Our analysis suggests that Marine Parade MRT Station has a lower efficiency in comparison to other regions where there is high rise HDB flats where utilisation is significantly higher.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-4ADD1274.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p><img src="images/paste-FED5FF7C.png" class="img-fluid" width="277"></p>
+<p><img src="images/paste-63FE5C9C.png" class="img-fluid" width="277"></p>
+<p><img src="images/paste-22C6FBB5.png" class="img-fluid" width="276"></p>
+<p><img src="images/paste-4A424771.png" class="img-fluid" width="274"></p>
+</section>
+<section id="efficiency-4" class="level4">
+<h4 class="anchored" data-anchor-id="efficiency-4">Efficiency</h4>
+<p>Based on current developments in the area, we have calculated the following:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Screenshot%202022-11-20%20at%203.00.01%20PM.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>From the calculation, we can see that Marine Parade MRT station has a passable Walkability Probability at 53.25%, which indicates that it will be efficient and is built in a good location.</p>
+<p>However, the band with the greatest proportion of buildings is the band furthest from the MRT station, which has a penalty of 0.4. This implies that in reality there are likely to be even less potential riders willing to walk to the station. Additionally, 59.19% of buildings in the area are private residential buildings, where residents will take some time to get into the habit of using the MRT as their main form of transportation.</p>
+<p>Additionally, the walkability probability has an inverse relationship from the curve that Olszewski and Wibowo (2005) had plotted and further points to the poor location of the station as in reality less people are likely to be willing to walk to the MRT station.</p>
+<p>However, the large proportion of businesses at 27.04% implies that ridership to and from Marine Parade MRT station is likely to remain high, balancing out some of the negatives.</p>
+<p>Hence, we can conclude that Marine Parade MRT station is likely to be highly efficient.</p>
+</section>
+<section id="cost-benefit-analysis-1" class="level4">
+<h4 class="anchored" data-anchor-id="cost-benefit-analysis-1">Cost Benefit Analysis</h4>
+<p>With a contract of S$555 million for Samsung to design and contract the Marine Parade MRT, residents of public residential buildings may not fully reap the benefits of having the MRT Station and better connectivity along the TEL Stage 4 region due to the lack of such buildings in the area. Hence in terms of equability and fairness, it was not made equal for residents who live in HDB flats and are considerably less wealthy yet share the burden of cost. Utilization would also be significantly lower compared to regions with high density of HDB flats or Condominiums.</p>
+</section>
+</section>
+<section id="te27-marine-terrace" class="level2">
+<h2 class="anchored" data-anchor-id="te27-marine-terrace">TE27: Marine Terrace</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-9AC954FE.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<section id="background-5" class="level4">
+<h4 class="anchored" data-anchor-id="background-5">Background</h4>
+<p>On 15 August 2014, the Land Transport Authority (LTA) proposed that Marine Terrace station would be part of Thomson–East Coastline (TEL) and is expected to be completed in 2023.</p>
+<p>LTA award the contract of at S$361 million to Ssangyong Engineering &amp; Construction Co.&nbsp;Ltd.&nbsp;– Hyundai Engineering &amp; Construction Co as joint venture for the design and construction of Marine Terrace Station and 1.78 kilometers of track tunnels in January 2016.</p>
+</section>
+<section id="target-audience-5" class="level4">
+<h4 class="anchored" data-anchor-id="target-audience-5">Target audience</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-5337866D.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Based on data and Google Streetview, it suggests that 83% of buildings are high rise condominiums and low-rise private residential buildings, while 7% are small clusters of high-rise HDB Flat. This suggests that there is a relatively good utilisation of Marine Terrace MRT services. There is also a good mix of high population density and low population density buildings. This in theory could suggest that there would be more residents utilising the MRT station as the population is much larger within the area.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-524E6B01.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption"><img src="images/paste-6AC682AF.png" class="img-fluid figure-img"></figcaption><p></p>
+</figure>
+</div>
+<p><img src="images/paste-A1126328.png" class="img-fluid" width="258"></p>
+<p><img src="images/paste-55D1D7FB.png" class="img-fluid" width="251"></p>
+<p><img src="images/paste-F9375904.png" class="img-fluid" width="259"></p>
+<p><img src="images/paste-30F73A6D.png" class="img-fluid" width="257"></p>
+<p><img src="images/paste-FF4C8403.png" class="img-fluid" width="257"></p>
+<p><img src="images/paste-30561D2A.png" class="img-fluid" width="253"></p>
+</section>
+<section id="efficiency-5" class="level4">
+<h4 class="anchored" data-anchor-id="efficiency-5">Efficiency</h4>
+<p>Based on current developments in the area, we have calculated the following:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Screenshot%202022-11-20%20at%203.07.19%20PM.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>From the calculation, we can see that Marine Terrace MRT station has a passable Walkability Probability at 54.14%, which indicates that it will be efficient and is built in a good location.</p>
+<p>Though the walkability probability is relatively low, we have discovered that the private residences in Marine Terrance are largely comprised of high-rise condominiums. Condos have a high population density compared to landed properties like Bungalows. Therefore, the condos that fall within the iso area are still served by the MRT station still relatively effectively meeting the needs of the people within that area.</p>
+<p>Additionally, the band with the largest proportion of buildings is the furthest from the MRT station, which has a penalty of 0.4. This means that in reality less potential riders would be willing to walk to the station. Furthermore, with 83% of buildings within the iso-area being private residential, it is likely that the residents are used to using cars as their main form of transportation and will take time to shift their habits towards the use of public transportation.</p>
+<p>Thus, we can conclude that Marine Terrace MRT station is efficient, although likely to be less efficient than what has been calculated. Additionally, it would take time to ramp up to the calculated efficiency.</p>
+</section>
+<section id="cost-to-benefit-analysis-3" class="level4">
+<h4 class="anchored" data-anchor-id="cost-to-benefit-analysis-3">Cost to Benefit Analysis</h4>
+<p>The Marine Terrace MRT station consists mainly of high-rise condominiums, high rise HDB Flats and low-rise private residential buildings. This suggests that there could be higher utilisation and ridership due to a high population density. Hence, the cost of development of S$361 million contracted by Ssangyong Engineering &amp; Construction Co.&nbsp;Ltd.&nbsp;and Hyundai Engineering &amp; Construction Co as joint venture for the design and construction of Marine Terrace Station was justifiable with consideration of the population density within the area.</p>
+</section>
+<section id="recommendations-2" class="level4">
+<h4 class="anchored" data-anchor-id="recommendations-2">Recommendations</h4>
+<p>Within the area, there is a lack of HDB Flats at 7%. The distribution of residential buildings within most of the TEL Stage 4 Lines are mostly high rise and low-rise private residential at 83% according to our data. It suggests there is an issue of equity and disparity between the affluent population living within the east region of Singapore as compared to other regions where HDBs are a common sight.</p>
+<p>The reason why not many developments are within the area is because existing low-rise private properties are taking up a lot of space within Marine Terrace MRT area. Currently, it will be almost impossible to have any new developments due to the tight space within the area, unless the government decides to claim back the land after the lease expires to make way for new developments.</p>
+</section>
+</section>
+<section id="te28-siglap" class="level2">
+<h2 class="anchored" data-anchor-id="te28-siglap">TE28: Siglap</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-25AD1BA5.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<section id="background-6" class="level4">
+<h4 class="anchored" data-anchor-id="background-6">Background</h4>
+<p>On 15 August 2014, LTA formalised the proposal of implementing the Siglap MRT station as part of the proposed TEL line.</p>
+<p>On 21 March 2016, LTA had awarded the contract to John Holland Pty Ltd and Zhen Hua (Singapore) Engineering Pte Ltd with a Joint Venture sum of S$176 million for the design and construction of Siglap Station and its expected complete in 2024.</p>
+</section>
+<section id="target-audience-6" class="level4">
+<h4 class="anchored" data-anchor-id="target-audience-6">Target Audience</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-56736B1B.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Based on Google Maps, we can observe that a large proportion of buildings within the iso-area are low-rise private residential buildings. It would suggest that a smaller population lives within the area of Siglap resulting in lower population density of buildings compared to areas where there are high population density buildings. In theory this would mean a lower utilisation of MRT services. Our analysis could also suggest that Siglap MRT Station will have a lower efficiency compared to other regions where there are high rise HDB flats and a higher population density leading to significantly higher utilisation rates.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-BCDECE61.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p><img src="images/paste-47946183.png" class="img-fluid" width="279"></p>
+<p><img src="images/paste-87045315.png" class="img-fluid" width="270"></p>
+<p><img src="images/paste-370AE139.png" class="img-fluid" width="276"></p>
+<p><img src="images/paste-F12630FB.png" class="img-fluid" width="256"></p>
+</section>
+<section id="efficiency-6" class="level4">
+<h4 class="anchored" data-anchor-id="efficiency-6">Efficiency</h4>
+<p>Based on current developments in the area, we have calculated the following:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Screenshot%202022-11-20%20at%203.25.48%20PM.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>From the calculation, we can see that Siglap MRT station has a good Walkability Probability at 56.87%, which indicates that it will be efficient and is built in a good location.</p>
+<p>However, the band with the largest proportion of buildings is the furthest from the MRT station, which has a penalty of 0.4. This means that in reality, fewer potential riders would be willing to walk to the station. Furthermore, with 87% of buildings within the iso-area being private residential buildings, it is likely that the residents are used to using cars as their main form of transportation. It will take time to shift their habits towards the use of public transportation.</p>
+<p>Thus, we can conclude that Siglap MRT station is efficient, although likely to be less efficient than what has been calculated. Additionally, it would take time to ramp up to the calculated efficiency.</p>
+</section>
+<section id="cost-benefit-analysis-2" class="level4">
+<h4 class="anchored" data-anchor-id="cost-benefit-analysis-2">Cost Benefit Analysis</h4>
+<p>The joint venture between LTA and John Holland Pty Ltd – Zhen Hua (Singapore) Engineering Pte Ltd for the design and construction of Siglap MRT station has an estimated sum of S$176 million, which is the cheapest of all TEL stage 4 stations. This would suggest that it will be almost 3 times more economical compared to having large engineering firm such as Samsung and China Railway to design and construct the MRT Station.</p>
+</section>
+<section id="long-term-contracts-and-risk" class="level4">
+<h4 class="anchored" data-anchor-id="long-term-contracts-and-risk">Long Term Contracts and Risk</h4>
+<p>However, significant consideration would have been taken place prior to the contract to ensure that a smaller company could deliver on its promise based on the Design, Build, Finance and Operate (DBFO) concept in long term contractual agreements.</p>
+<p>In governmental and private partnership contracts, LTA and SMRT would have to undertake considerable and unpredictable risk in the contract to monitor and oversee contractual agreement in the joint venture to ensure the successful delivery of the stages of development. As compared to a larger firm like Samsung and China Railway, they would not have the technological and engineering capacity to carry out such large-scale project and contractual insurance for a liability coverage.</p>
+<p>In summary, although Siglap MRT station is considerably more economical with sum of S$176 million and could make the project seem to have more efficiency (serving low-rise private properties), but there is significant risk being undertaken by LTA. In event of a long-term project failure, large responsibility would be borne by the government who manages taxpayers’ money to fund these projects and would result in huge reputational damage.</p>
+</section>
+<section id="recommendations-3" class="level4">
+<h4 class="anchored" data-anchor-id="recommendations-3">Recommendations</h4>
+<p>LTA should maintain oversight on the project to ensure long term contracts are able to be executed according to the developmental stages stated in its contracts.</p>
+</section>
+</section>
+<section id="te29-bayshore" class="level2">
+<h2 class="anchored" data-anchor-id="te29-bayshore">TE29: Bayshore</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-988859F4.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<section id="background-7" class="level4">
+<h4 class="anchored" data-anchor-id="background-7">Background</h4>
+<p>On 15 August 2014, LTA formalised the proposal of implementing the Bayshore MRT station as part of the proposed TEL line.</p>
+<p>On 21 March 2016, LTA awarded the contract to Woh Hup (Private) Ltd and Shanghai Tunnel Engineering Co (Singapore) Pte Ltd at a Joint Venture sum of S$296 million for the design and construction of Siglap Station and its expected complete in 2024.</p>
+</section>
+<section id="target-audience-7" class="level4">
+<h4 class="anchored" data-anchor-id="target-audience-7">Target Audience</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-9704737C.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Bayshore MRT station’s main target audience are private residents living in mainly low-rise private residential buildings with couple clusters of condominiums and HDB Flats. There is also little development within the area beyond private residential buildings currently.</p>
+<p>Based on the data and Google Maps, we can observe that a large proportion of 93% of buildings are low-rise private residential buildings with small clusters of high-rise condominiums. This suggests that there is a lower population living within the area of Bayshore due to low population density of buildings. This in theory would mean lower utilisation of MRT services.</p>
+<p>Our analysis also suggests that Bayshore MRT Station is less cost effective in comparison to other regions where there is high rise HDB flats with high population density, which would lead to higher utilisation.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-C915DEC2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p><img src="images/paste-DE051532.png" class="img-fluid" width="270"></p>
+<p><img src="images/paste-EEE08980.png" class="img-fluid" width="279"></p>
+<p><img src="images/paste-8E1CC93C.png" class="img-fluid" width="274"></p>
+<p><img src="images/paste-209113A2.png" class="img-fluid" width="277"></p>
+</section>
+<section id="efficiency-7" class="level4">
+<h4 class="anchored" data-anchor-id="efficiency-7">Efficiency</h4>
+<p>Based on current developments in the area, we have calculated the following:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Screenshot%202022-11-20%20at%203.34.20%20PM.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>From the calculation, we can see that Bayshore MRT station has a relatively poor Walkability Probability at 52.41%, which indicates that it will be efficient.</p>
+<p>However, the band with the largest proportion of buildings is the furthest from the MRT station, which has a penalty of 0.4. This means that in reality fewer potential riders would be willing to walk to the station. Furthermore, with 93% of buildings within the iso-area being private residential, it is likely that the residents are used to using cars as their main form of transportation and will take time to shift their habits towards the use of public transportation.</p>
+<p>Nonetheless, at most of private residences are low-rise buildings such as bungalows and terraces, which have a lower population density. Hence, it is likely that Bayshore will have a lower efficiency. Thus, we can conclude that Bayshore MRT station is not efficient.</p>
+</section>
+<section id="future-development-by-ura" class="level4">
+<h4 class="anchored" data-anchor-id="future-development-by-ura">Future development by URA</h4>
+<p><img src="images/paste-F776E184.png" class="img-fluid" width="274"></p>
+<p><img src="images/paste-D87A0CF0.png" class="img-fluid" width="225"></p>
+<p>Public housing is planned to be built at the residential estates of Bayshore and around Upper Changi MRT station, as part of a broader plan to add homes closer to jobs and have a better mix of public and private housing island wide. However, the planned area is a distance away from Bayshore MRT and may not fall within its iso-area.</p>
+</section>
+<section id="cost-to-benefit-analysis-4" class="level4">
+<h4 class="anchored" data-anchor-id="cost-to-benefit-analysis-4">Cost to Benefit Analysis</h4>
+<p>The Bayshore MRT station iso-area contains mainly low-rise private residential buildings and small clusters of high-rise condominiums. This suggests that there could be lower utilisation and ridership due to the low population density. This makes the cost of development of S$296 million not justifiable with consideration to the lower population within the area. However, the government has plans to build more public housing in the area, which may make the project more cost effective and justify its development.</p>
+</section>
+<section id="recommendations-4" class="level4">
+<h4 class="anchored" data-anchor-id="recommendations-4">Recommendations</h4>
+<p>Within the area, there is a lack of development of HDB Flats. The distribution of residential buildings is mostly low-rise private residential according to our data. It suggests a great issue of equity and disparity between the affluent population living within the east region of Singapore as compared to other regions where HDB are a common sight.</p>
+<p>The reason why not many developments are within the area is because existing low-rise private properties are taking up a lot of space within Bayshore MRT area. As of current, it will be almost impossible to have any new large-scale development, due to the tight space within the area unless the government decide to claim back the land after the lease expires, to make way for new developments. If HDB does build HDB flats in the Bayshore area, it would do much to improve equity.</p>
+</section>
+</section>
+<section id="citations" class="level2">
+<h2 class="anchored" data-anchor-id="citations">Citations</h2>
+<p>• Olszewski, P., &amp; Wibowo, S. S. (2005). Using equivalent walking distance to assess pedestrian accessibility to transit stations in Singapore. Transportation Research Record: Journal of the Transportation Research Board, 1927(1), 38–45. https://doi.org/10.1177/0361198105192700105</p>
+<p>• Land Transport Authority. (2014, August 15). Joint News Release by the Land Transport Authority &amp; Singapore Land Authority - Thomson-East Coast Line: New MRT Links in the East [News Release]. <a href="https://www.lta.gov.sg/content/ltagov/en/newsroom/2014/8/2/joint-news-release-by-the-land-transport-authority-singapore-land-authority---thomson-east-coast-line-new-mrt-links-in-.html">https://www.lta.gov.sg/content/ltagov/en/newsroom/2014/8/2/joint-news-release-by-the-land-transport-authority-singapore-land-authority—thomson-east-coast-line-new-mrt-links-in-.html</a></p>
+<p>• Land Transport Authority. (2019, January 07). New Station on Thomson-East Coast Line to Serve Visitors to Founders’ Memorial [News Release]. <a href="https://www.lta.gov.sg/content/ltagov/en/newsroom/2019/1/2/new-station-on-thomson-east-coast-line-to-serve-visitors-to-founders-memorial.html" class="uri">https://www.lta.gov.sg/content/ltagov/en/newsroom/2019/1/2/new-station-on-thomson-east-coast-line-to-serve-visitors-to-founders-memorial.html</a></p>
+<p>• Low, Y. (2019, January 07). Property experts ask: Will there be enough riders to justify having MRT station at Founders’ Memorial? Todayonline. <a href="https://www.todayonline.com/singapore/property-experts-ask-will-there-be-enough-riders-justify-having-mrt-station-founders" class="uri">https://www.todayonline.com/singapore/property-experts-ask-will-there-be-enough-riders-justify-having-mrt-station-founders</a></p>
+<p>• THE BUSINESS TIMES. (2019, January 07). Thomson-East Coast line to add MRT station at Founders’ Memorial in Marina Bay. THE BUSINESS TIMES. <a href="https://www.businesstimes.com.sg/companies-markets/transport-logistics/thomson-east-coast-line-add-mrt-station-founders-memorial" class="uri">https://www.businesstimes.com.sg/companies-markets/transport-logistics/thomson-east-coast-line-add-mrt-station-founders-memorial</a></p>
+<p>• Land Transport Authority. (2016, January 25). LTA Awards Three Contracts for Thomson-East Coast Line’s Tanjong Rhu, Katong Park and Marine Terrace Stations [News Release]. <a href="https://www.lta.gov.sg/content/ltagov/en/newsroom/2016/1/2/lta-awards-three-contracts-for-thomson-east-coast-lines-tanjong-rhu-katong-park-and-marine-terrace-stations.html" class="uri">https://www.lta.gov.sg/content/ltagov/en/newsroom/2016/1/2/lta-awards-three-contracts-for-thomson-east-coast-lines-tanjong-rhu-katong-park-and-marine-terrace-stations.html</a></p>
+<p>• STECS. (2021). Singapore LTA T305. <a href="http://www.stecs.com.sg/lta-t305" class="uri">http://www.stecs.com.sg/lta-t305</a></p>
+<p>• Land Transport Authority. (2015, November 20). LTA Awards First Civil Contract for Thomson-East Coast Line (East Coast Stretch) [News Release]. <a href="https://www.lta.gov.sg/content/ltagov/en/newsroom/2015/11/2/lta-awards-first-civil-contract-for-thomson-east-coast-line-east-coast-stretch.html#:~:text=The%20Land%20Transport%20Authority%20(LTA,of%20approximately%20S%24555%20million." class="uri">https://www.lta.gov.sg/content/ltagov/en/newsroom/2015/11/2/lta-awards-first-civil-contract-for-thomson-east-coast-line-east-coast-stretch.html#:~:text=The%20Land%20Transport%20Authority%20(LTA,of%20approximately%20S%24555%20million.</a></p>
+<p>• Land Transport Authority. (2014, August 15). Joint News Release by the Land Transport Authority &amp; Singapore Land Authority - Thomson-East Coast Line: New MRT Links in the East [News Release]. <a href="https://www.lta.gov.sg/content/ltagov/en/newsroom/2014/8/2/joint-news-release-by-the-land-transport-authority-singapore-land-authority---thomson-east-coast-line-new-mrt-links-in-.html">https://www.lta.gov.sg/content/ltagov/en/newsroom/2014/8/2/joint-news-release-by-the-land-transport-authority-singapore-land-authority—thomson-east-coast-line-new-mrt-links-in-.html</a></p>
+<p>• Sock, Y. P. (November 2009). Transformation of the Urban Rail Sector through PPP. Singapore Management University. https://ink.library.smu.edu.sg/cgi/viewcontent.cgi?article=2167&amp;context=soe_research • Urban Redevelopment Authority. (2019). Draft Master Plan 2019 WHAT TO LOOK OUT FOR IN KALLANG! Urban Redevelopment Authority. <a href="https://www.ura.gov.sg/-/media/Corporate/Planning/DMP19/Regional-Resources/Central-Region-Flyers/Kallang.pdf" class="uri">https://www.ura.gov.sg/-/media/Corporate/Planning/DMP19/Regional-Resources/Central-Region-Flyers/Kallang.pdf</a></p>
+<p>• Ng, M. (2022, June 06). Bayshore, Upper Changi to have public, private housing; URA’s new plan unveils future housing towns. THE STRATITS TIMES. <a href="https://www.straitstimes.com/singapore/bayshore-upper-changi-to-have-public-private-housing-uras-new-plan-unveils-future-housing-towns" class="uri">https://www.straitstimes.com/singapore/bayshore-upper-changi-to-have-public-private-housing-uras-new-plan-unveils-future-housing-towns</a></p>
+<p>• Urban Redevelopment Authority. (2022). East Region. <a href="https://www.ura.gov.sg/Corporate/Planning/Master-https://www.ura.gov.sg/Corporate/Planning/Master-Plan/Regional-Highlights/East-RegionPlan/Regional-Highlights/East-Region">https://www.ura.gov.sg/Corporate/Planning/Master-Plan/Regional-Highlights/East-Region</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
