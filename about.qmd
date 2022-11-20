@@ -35,3 +35,5 @@ The following data sets will be used
 -   [Roads and Buildings shp data from OpenStreetMaps (OSM) data sets](https://download.geofabrik.de/asia/malaysia-singapore-brunei.html)
 
 ## Project Timeline
+
+![](images/Timeline.jpg){fig-align="center" width="1495"}
