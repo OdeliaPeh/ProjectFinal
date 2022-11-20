@@ -9,7 +9,7 @@ A buffer area is the most common way to delineate a catchment area. It measures 
 
 A more credible and realistic approach to delineate the catchment area would be to use network distance i.e., the shortest distance approach. The method that provides this approach is Iso-Areas as Polygons (from Layer). The iso areas are mapped onto the walkable paths by Singaporeans making it more accurate.
 
-![](images/Buffer%20v%20iso.jpg)
+![](images/Buffer%20v%20iso.jpg){fig-align="center"}
 
 In reality, a person cannot always travel in a straight line towards their destination but will have to turn at bends and curves depending on their walking paths.
 
@@ -43,7 +43,7 @@ Under the Layers panel, right click on **roads** --\> **Open Attribute Table**.
 
 Click on **Select features using an expression** icon. The **Select by Expression** dialog window will appear. Under the expression pane, we keyed in the following to select expressways in Singapore:
 
-**"fclass"= 'motorway or "fclass"= 'motorway_link**
+> **"fclass"= 'motorway or "fclass"= 'motorway_link**
 
 In the attribute table, we then clicked on **Invert Selection** so that all the roads except expressways are selected. The selection was then saved.
 
@@ -65,7 +65,7 @@ After clipping, we saved the new clip as **Buildings**.
 
 Upon inspecting the attribute table of the **buildings** layer, we found that some of the buildings were not categorised properly i.e. Null values.
 
-![](images/AT1.jpg)
+![](images/AT1.jpg){fig-align="center"}
 
 Thus, we used Google street View as a reference and re-categorised these buildings.
 
@@ -107,6 +107,28 @@ Select the buildings to be classed and open the attribute table. Select the **Op
 
 This will update all selected features to the correct class.
 
+#### 2.2.2.4 Symbolising Buildings
+
+a)   Right click on **FM_buildings** Layer.
+
+b)   Click on **Properties**
+
+c)    Go to the **Symbology** tab
+
+d)   Select **Categorized**
+
+e)   For **value**, select **class**
+
+f)     Click on **Apply**
+
+g)   Click on the dropdown arrow of Symbol and change the colour schemes, assign the values of the class to the following colours below
+
+![](images/Colours.jpg)
+
+h)   Click on **Apply** again then click on **OK**
+
+Repeat the steps on the remaining buildings that falls within the other iso areas.
+
 ## **2.3 Preparation of Rail Stations**
 
 Import Rail Stations data(master-plan-2019-rail-station-layer) into QGIS. The rail stations data contains the all the MRT station in Singapore.
@@ -117,7 +139,7 @@ Under the Layers panel, right click on **G_MP19_RAIL_STN_PL** --\> **Open Attrib
 
 Click on **Select features using an expression** and key in the following query statement:
 
-**"Name"  =  'FOUNDERS'' MEMORIAL' or  "Name"  =  'TANJONG RHU' or  "Name"  =  'KATONG PARK' or  "Name"  =  'TANJONG KATONG' or  "Name"  =  'MARINE PARADE' or  "Name"  =  'MARINE TERRACE' or  "Name"  =  'SIGLAP' or  "Name"  =  'BAYSHORE'**
+> **"Name"  =  'FOUNDERS'' MEMORIAL' or  "Name"  =  'TANJONG RHU' or  "Name"  =  'KATONG PARK' or  "Name"  =  'TANJONG KATONG' or  "Name"  =  'MARINE PARADE' or  "Name"  =  'MARINE TERRACE' or  "Name"  =  'SIGLAP' or  "Name"  =  'BAYSHORE'**
 
 Click on **Select Features** and then **close** the window. Save the selected features as **TEL4_stations**.
 
@@ -177,402 +199,82 @@ We saved the layer in Geopackage format. Call the layer **MRT Station Entrance S
 
 Now we will be implementing **Iso-Area as Polygons (from Layer)** as a way to delineate the catchment areas to derive the accessibility to the TEL Stage 4 MRT stations
 
-### 2.7.1 Creating ISO AREAS
+### 2.4.1 Creating ISO AREAS
 
 Select the entrance/exit points of a single MRT station (eg. FOUNDERS' MEMORIAL)
 
-a)   In the menu bar, go to **Processing** --\> **toolbox**.
+-   In the menu bar, go to **Processing** --\> **toolbox**.
 
-b)   In toolbox, click on the dropdown arrow beside **QNEAT3**
+-   In toolbox, click on the dropdown arrow beside **QNEAT3**
 
-c)    Click on the dropdown arrow beside **Iso-Areas**.
+-   Click on the dropdown arrow beside **Iso-Areas**.
 
-d)   Double click on **Iso-Area as Polygons (from Layer)**
+-   Double click on **Iso-Area as Polygons (from Layer)**
 
-e)   The dialog window for **Iso-Area as Polygons (from Layer)** will appear.
+-   The dialog window for **Iso-Area as Polygons (from Layer)** will appear
 
-·      For **Vector layer representing network**, select *roads except motorway* from the drop-down list.
+    -   For **Vector layer representing network**, select *roads except motorway* from the drop-down list.
 
-·      For **Start Points**, select *MRT Station Entrance Stage 4* from the drop-down list
+    -   For **Start Points**, select *MRT Station Entrance Stage 4* from the drop-down list
 
-·      For **Unique Point ID field**, leave it as fid
+    -   For **Unique Point ID field**, leave it as fid
 
-·      For **Size of Iso-Area (distance or time value)**, type *800*.
+    -   For **Size of Iso-Area (distance or time value)**, type *800*.
 
-*·* For **Contour Interval**, type *200*
+    -   For **Contour Interval**, type *200*
 
-Keep the rest of the entries as default.
-
-Your screen should look similar to the screenshot below.
-
-!\[Graphical user interface, text, application
-
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image059.png){alt="Graphical user interface, text, application
-
-Description automatically generated"}
+    -   Keep the rest of the entries as default.
 
 When you are ready to run the function, click on **run**
 
-When the process completed, two temporary layers namely: `Output Polygon` and `Output Interpolation` will be added onto Layers panel and display on QGIS View window.
+When the process completed, two temporary layers namely: `Output Polygon` and `Output Interpolation` will be added onto Layers panel and display on QGIS View window. Save the layer as **{Station initials}\_ISO**.
 
-!\[Diagram
+### 2.4.2 Changing the interval size of the iso-areas
 
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image061.png){alt="Diagram
+a\) Right click on **FM_ISO** Layer.
 
-Description automatically generated"}
+b\) Click on **Properties**
 
-Using the steps learnt from the previous section, save the temporary Output Polygon layer in Geopackage format. Call the layer **FM_ISO**. Remove the original temporary Output Polygon layer and the Output interpolation raster layer.
+c\) Go to the **Symbology** tab
 
- 
+d\) Select **Graduated**
 
-!\[Diagram
+e\) For **value**, select **cost_level**
 
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image063.png){alt="Diagram
+f\) Change the colour ramp to a suitable colour range and check **Invert colour ramp**
 
-Description automatically generated"}
+g\) For **mode** select **Fixed Interval**
 
-### \*\*2.7.2 Changing the interval size of the iso
+h\) Change the **interval size** to **199**. This is to ensure each band shows up in the gradient
 
-areas\*\*
-
-a)   Right click on **FM_ISO** Layer.
-
-b)   Click on **Properties**
-
-c)    Go to the **Symbology** tab
-
-d)   Select **Graduated**
-
-e)   For **value**, select **cost_level**
-
-f)     Change the colour ramp to a suitable colour range and check **Invert colour ramp**
-
-g)   For **mode** select **Fixed Interval**
-
-h)   Change the **interval size** to **199**
-
-![](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image065.png)
-
-i)     Once ready, click on **Apply** then **OK**
-
-!\[Graphical user interface, diagram
-
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image067.png){alt="Graphical user interface, diagram
-
-Description automatically generated"}
-
- 
+i\) Once ready, click on **Apply** then **OK**
 
 Click on **Save** then click on the **Deselect Features from All Layers**
 
- !\[A picture containing funnel chart
+Repeat the steps to create the iso areas for the remaining entrances/exits of the other MRT stations and change the intervals.
 
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image069.png){alt="A picture containing funnel chart
+![](images/Map1.jpg){fig-align="center"}
 
-Description automatically generated"}
-
- 
-
-DIY: Using the steps learnt previously, create the iso areas for the remaining entrances/exits of the other MRT stations and change the intervals. Remember to save the individual Iso areas as Geopackage format.
-
- 
-
-!\[Map
-
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image071.png){alt="Map
-
-Description automatically generated"}
-
- 
-
- 
-
- 
-
-## **2.8 Extracting buildings within the iso areas**
+## **2.5 Extracting buildings within the iso areas**
 
 Do not use clipped as the buildings may get 'chopped' off
 
-·       From the menu bar, select the **Select by Location** !\[A picture containing graphical user interface
+From the menu bar, select the **Select by Location**
 
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image073.png){alt="A picture containing graphical user interface
+-   *For Select features from*, select TEL- buildings from the dropdown arrow
 
-Description automatically generated"}
+-   Check the *intersect* box
 
- 
+-   For *By comparing to the features from*, select FM_ISO from the dropdown arrow
 
- 
+After running it, save the layer as **{Station initials}\_buildings**.
 
-**Select by Location** dialog window appears
+Repeat the process for all stations.
 
-·       For *Select features from*, select TEL- buildings from the dropdown arrow
+![](images/Map2.jpg){fig-align="center"}
 
-·       Check the *intersect* box
+## Final Map and Geoweb
 
-·       For *By comparing to the features from*, select FM_ISO from the dropdown arrow
+This will be what the final map looks like. View the geoweb version [here](https://g1t10project.netlify.app).
 
-**Select by Location** dialog window should look similar to this
-
- 
-
-!\[Graphical user interface
-
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image075.png){alt="Graphical user interface
-
-Description automatically generated"}
-
- 
-
-When you're ready, click on the **Run** button
-
-Once done, click on **Close**
-
- 
-
-Your screen should look similar to this.
-
-!\[Diagram
-
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image077.png){alt="Diagram
-
-Description automatically generated"}
-
- 
-
-DIY: Using the steps you had learned, save the `selected features` into GeoPackage, call the data layer `FM_buildings`.
-
- 
-
-DIY: Using the steps you had learned, extract the buildings within the remaining individual iso areas. Save them into GeoPackage format
-
- 
-
-![](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image079.png)
-
- 
-
-## \*\*2.9 Categorising buildings within the iso
-
-areas\*\*
-
-Some of the buildings were not categorised properly i.e. Null values. Thus, we must use Google street View as a reference and re-categorise these buildings.
-
- 
-
-### \*\*2.9.1 Creating a new field called class for
-
-the buildings within the iso area\*\*
-
-a)   Right click on the **FM_buildings** layer
-
-b)   Select **Open Attribute Table**
-
-c)    Click on the **toggle editing mode** !\[Icon
-
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image081.png){alt="Icon
-
-Description automatically generated"}
-
-d)   Click on **New field** !\[Graphical user interface
-
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image083.png){alt="Graphical user interface
-
-Description automatically generated"}
-
- 
-
-New field dialog window appears
-
-For **Name**, type 'class'
-
-For **Type**, select Text (string)
-
-For **Length**, select 30
-
-!\[Graphical user interface, text, application
-
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image085.png){alt="Graphical user interface, text, application
-
-Description automatically generated"}
-
- 
-
-Click **OK**
-
- 
-
-Notice a new column is added
-
- 
-
-!\[Table
-
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image087.png){alt="Table
-
-Description automatically generated"}
-
- 
-
-Click on the **toggle editing mode** again to **save**.
-
- 
-
-### \*\*2.9.3 Identifying buildings within the
-
-iso-areas\*\*
-
- 
-
-Import **OpenStreetMap** layer into QGIS
-
- 
-
-!\[Map
-
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image089.png){alt="Map
-
-Description automatically generated"}
-
-Figure 2
-
- 
-
-![](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image091.png)
-
-Figure 3
-
- 
-
- 
-
-Using google street view as a reference as depicted in figure 3, one can say that the buildings that are in Costa Rhu that are within the iso area of Founders' Memorial are **Private residences**.
-
- 
-
-### \*\*2.9.4 Categorising the buildings within the
-
-Iso Area\*\*
-
-a)    Using the steps learnt earlier, select the buildings in the blue circle as shown in Figure 2.
-
-b)    Using the steps learnt earlier, open the attribute table of FM_buildings layer
-
-c)     Select the **Open field calculator** symbol !\[Diagram
-
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image093.png){alt="Diagram
-
-Description automatically generated"}
-
-d)    Check the **Update existing field**
-
-e)    Click on the dropdown arrow and select **class**
-
-f)      In the Expression Pane, type **'Private Residential'**
-
- 
-
- 
-
- 
-
-!\[Graphical user interface, application
-
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image095.png){alt="Graphical user interface, application
-
-Description automatically generated"}
-
-g)    Click on **OK**
-
-Notice now the class of all the selected features have now been updated to **Private Residential**
-
-!\[Table
-
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image097.png){alt="Table
-
-Description automatically generated"}
-
-h)    Click on the **toggle editing mode** to save
-
-i)      Close the attribute table
-
-j)      Click on **Deselect features**
-
- 
-
-### \*\*2.9.5 Changing the colour scheme of the
-
-buildings\*\*
-
-a)   Right click on **FM_buildings** Layer.
-
-b)   Click on **Properties**
-
-c)    Go to the **Symbology** tab
-
-d)   Select **Categorized**
-
-e)   For **value**, select **class**
-
-f)     Click on **Apply**
-
-!\[Graphical user interface, text, application
-
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image099.png){alt="Graphical user interface, text, application
-
-Description automatically generated"}
-
-g)   Click on the dropdown arrow of Symbol and change the colour to !\[Map
-
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image101.png){alt="Map
-
-Description automatically generated"}
-
-h)   Click on **Apply** again then click on **OK**
-
-!\[Map
-
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image103.png){alt="Map
-
-Description automatically generated"}
-
-Remember to **save** the project
-
- 
-
- 
-
-DIY: Using the steps learnt previously, i.e. **identifying, categorising and changing the colour scheme**, repeat the steps on the remaining buildings that falls within the other iso areas.
-
- 
-
-Note: The only **values** that **class** will take are: '**Private** **Residential**'  , '**Business'** , '**Civic'** , '**Education'** , '**Others'** , '**Public** **Residential'** and '**Religious'**
-
-Note: When changing their colour schemes, assign the values of the class to the following colours as per Figure 4
-
- 
-
- 
-
-!\[Map
-
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image105.png){alt="Map
-
-Description automatically generated"}
-
-Figure 4
-
- 
-
- 
-
-Your final screen display should look similar to the screenshot below.
-
-(Yellow points are the entrances/exits of the MRT stations)
-
- 
-
-!\[A map of a city
-
-Description automatically generated with medium confidence\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image107.png){alt="A map of a city
-
-Description automatically generated with medium confidence"}
+![](images/Map3.jpg){fig-align="center"}

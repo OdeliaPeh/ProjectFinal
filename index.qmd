@@ -1,8 +1,10 @@
 ---
-title: "ProjectFinal"
+title: "Welcome"
 ---
 
 Welcome to our GIS Project, we are G1T10.
+
+Our group chose Theme 2, Sub-theme 2: Catchment areas study of the Thomson-East Coast MRT Line Stage 4.
 
 Here is a quick summary of our project:
 
