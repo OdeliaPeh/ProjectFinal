@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Group 10 - Methodology</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Group 10</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html">Overview</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./methods.html" aria-current="page">Methodology</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./analysis.qmd">Analysis</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./conclusion.qmd">Conclusions</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#consideration-iso---area-vs-buffer" id="toc-consideration-iso---area-vs-buffer" class="nav-link active" data-scroll-target="#consideration-iso---area-vs-buffer">Consideration: Iso - Area vs Buffer</a></li>
+  <li><a href="#data-collection" id="toc-data-collection" class="nav-link" data-scroll-target="#data-collection"><strong>1.0: Data Collection</strong></a>
+  <ul class="collapse">
+  <li><a href="#downloading-geospatial-data" id="toc-downloading-geospatial-data" class="nav-link" data-scroll-target="#downloading-geospatial-data"><strong>1.1 Downloading geospatial data</strong></a></li>
+  </ul></li>
+  <li><a href="#data-preparation-and-data-cleaning-osm" id="toc-data-preparation-and-data-cleaning-osm" class="nav-link" data-scroll-target="#data-preparation-and-data-cleaning-osm"><strong>2.0 Data Preparation and Data Cleaning : OSM</strong></a>
+  <ul class="collapse">
+  <li><a href="#preparation-of-road-network-layer" id="toc-preparation-of-road-network-layer" class="nav-link" data-scroll-target="#preparation-of-road-network-layer"><strong>2.1 Preparation of Road Network Layer</strong></a>
+  <ul class="collapse">
+  <li><a href="#selecting-all-road-network-within-the-study-area" id="toc-selecting-all-road-network-within-the-study-area" class="nav-link" data-scroll-target="#selecting-all-road-network-within-the-study-area"><strong>2.1.1 Selecting all road network within the study area</strong></a></li>
+  <li><a href="#extracting-roads-except-expressways" id="toc-extracting-roads-except-expressways" class="nav-link" data-scroll-target="#extracting-roads-except-expressways"><strong>2.1.2 Extracting roads except expressways</strong></a></li>
+  </ul></li>
+  <li><a href="#preparation-of-buildings-layer" id="toc-preparation-of-buildings-layer" class="nav-link" data-scroll-target="#preparation-of-buildings-layer"><strong>2.2 Preparation of Buildings Layer</strong></a>
+  <ul class="collapse">
+  <li><a href="#selecting-all-buildings-within-the" id="toc-selecting-all-buildings-within-the" class="nav-link" data-scroll-target="#selecting-all-buildings-within-the">**2.2.1 Selecting all buildings within the</a></li>
+  <li><a href="#categorising-buildings-within-the-iso-areas" id="toc-categorising-buildings-within-the-iso-areas" class="nav-link" data-scroll-target="#categorising-buildings-within-the-iso-areas">2.2.2 <strong>Categorising buildings within the iso areas</strong></a></li>
+  </ul></li>
+  <li><a href="#preparation-of-rail-stations" id="toc-preparation-of-rail-stations" class="nav-link" data-scroll-target="#preparation-of-rail-stations"><strong>2.3 Preparation of Rail Stations</strong></a>
+  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">**2.6.1&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  <li><a href="#adding-entrancesexits" id="toc-adding-entrancesexits" class="nav-link" data-scroll-target="#adding-entrancesexits">**2.6.2&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Adding Entrances/Exits</a></li>
+  </ul></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">**2.7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+  <ul class="collapse">
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">**2.7.1&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  <li><a href="#changing-the-interval-size-of-the-iso" id="toc-changing-the-interval-size-of-the-iso" class="nav-link" data-scroll-target="#changing-the-interval-size-of-the-iso">**2.7.2 Changing the interval size of the iso</a></li>
+  </ul></li>
+  <li><a href="#extracting-buildings-within-the-iso-areas" id="toc-extracting-buildings-within-the-iso-areas" class="nav-link" data-scroll-target="#extracting-buildings-within-the-iso-areas"><strong>2.8 Extracting buildings within the iso areas</strong></a></li>
+  <li><a href="#categorising-buildings-within-the-iso" id="toc-categorising-buildings-within-the-iso" class="nav-link" data-scroll-target="#categorising-buildings-within-the-iso">**2.9 Categorising buildings within the iso</a>
+  <ul class="collapse">
+  <li><a href="#creating-a-new-field-called-class-for" id="toc-creating-a-new-field-called-class-for" class="nav-link" data-scroll-target="#creating-a-new-field-called-class-for">**2.9.1 Creating a new field called class for</a></li>
+  <li><a href="#identifying-buildings-within-the-1" id="toc-identifying-buildings-within-the-1" class="nav-link" data-scroll-target="#identifying-buildings-within-the-1">**2.9.3 Identifying buildings within the</a></li>
+  <li><a href="#categorising-the-buildings-within-the-1" id="toc-categorising-the-buildings-within-the-1" class="nav-link" data-scroll-target="#categorising-the-buildings-within-the-1">**2.9.4 Categorising the buildings within the</a></li>
+  <li><a href="#changing-the-colour-scheme-of-the" id="toc-changing-the-colour-scheme-of-the" class="nav-link" data-scroll-target="#changing-the-colour-scheme-of-the">**2.9.5 Changing the colour scheme of the</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Methodology</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="consideration-iso---area-vs-buffer" class="level2">
+<h2 class="anchored" data-anchor-id="consideration-iso---area-vs-buffer">Consideration: Iso - Area vs Buffer</h2>
+<p>A buffer area is the most common way to delineate a catchment area. It measures a Euclidean distance away from the point given. However, this convenience comes with some issue. Using Euclidean distances is essentially a straight line and can be misleading and impractical on a map.</p>
+<p>A more credible and realistic approach to delineate the catchment area would be to use network distance i.e., the shortest distance approach. The method that provides this approach is Iso-Areas as Polygons (from Layer). The iso areas are mapped onto the walkable paths by Singaporeans making it more accurate.</p>
+<p><img src="images/Buffer%20v%20iso.jpg" class="img-fluid"></p>
+<p>In reality, a person cannot always travel in a straight line towards their destination but will have to turn at bends and curves depending on their walking paths.</p>
+</section>
+<section id="data-collection" class="level1">
+<h1><strong>1.0: Data Collection</strong></h1>
+<section id="downloading-geospatial-data" class="level2">
+<h2 class="anchored" data-anchor-id="downloading-geospatial-data"><strong>1.1 Downloading geospatial data</strong></h2>
+<p>First, download the following geospatial data from <a href="https://data.gov.sg/">data.gov.sg</a>:</p>
+<ul>
+<li><p>Master Plan 2019 Subzone Boundary (No Sea)</p></li>
+<li><p>Rail stations</p></li>
+</ul>
+<p>Next, download geospatial data from <a href="https://download.geofabrik.de/">geofabrick</a>:</p>
+<ul>
+<li>Roads and Buildings data from OpenStreetMap(OSM) data sets</li>
+</ul>
+</section>
+</section>
+<section id="data-preparation-and-data-cleaning-osm" class="level1">
+<h1><strong>2.0 Data Preparation and Data Cleaning : OSM</strong></h1>
+<section id="preparation-of-road-network-layer" class="level2">
+<h2 class="anchored" data-anchor-id="preparation-of-road-network-layer"><strong>2.1 Preparation of Road Network Layer</strong></h2>
+<p>We imported the Road Network data(gis_osm_roads_free_1.shp) into QGIS. The Road Network data contains the Road network from Malaysia, Brunei and Singapore.</p>
+<section id="selecting-all-road-network-within-the-study-area" class="level3">
+<h3 class="anchored" data-anchor-id="selecting-all-road-network-within-the-study-area"><strong>2.1.1 Selecting all road network within the study area</strong></h3>
+<p>Using the <strong>Select Features by Polygon</strong> operation of QGIS, we then extracted the road network features that fall within Singapore study area.</p>
+</section>
+<section id="extracting-roads-except-expressways" class="level3">
+<h3 class="anchored" data-anchor-id="extracting-roads-except-expressways"><strong>2.1.2 Extracting roads except expressways</strong></h3>
+<p>Under the Layers panel, right click on <strong>roads</strong> –&gt; <strong>Open Attribute Table</strong>.</p>
+<p>Click on <strong>Select features using an expression</strong> icon. The <strong>Select by Expression</strong> dialog window will appear. Under the expression pane, we keyed in the following to select expressways in Singapore:</p>
+<p><strong>"fclass"= 'motorway or "fclass"= 'motorway_link</strong></p>
+<p>In the attribute table, we then clicked on <strong>Invert Selection</strong> so that all the roads except expressways are selected. The selection was then saved.</p>
+</section>
+</section>
+<section id="preparation-of-buildings-layer" class="level2">
+<h2 class="anchored" data-anchor-id="preparation-of-buildings-layer"><strong>2.2 Preparation of Buildings Layer</strong></h2>
+<p>Import the Building Network data(gis_osm_buildings_free_1.shp) into QGIS. The building Network data contains the building network from Malaysia, Brunei and Singapore.</p>
+<section id="selecting-all-buildings-within-the" class="level3">
+<h3 class="anchored" data-anchor-id="selecting-all-buildings-within-the">**2.2.1 Selecting all buildings within the</h3>
+<p>study area**</p>
+<p>Using the <strong>Clip</strong> operation of QGIS, extract the building network features that fall with Singapore study area.</p>
+<p>For the Input <strong>layer</strong>, we selected the input layer to clip i.e. gis_osm_roads_buildings_1.shp</p>
+<p>For the Overlay <strong>layer</strong>, we selected the layer that will be used as reference i.e.&nbsp;SG_Subzone</p>
+<p>After clipping, we saved the new clip as <strong>Buildings</strong>.</p>
+</section>
+<section id="categorising-buildings-within-the-iso-areas" class="level3">
+<h3 class="anchored" data-anchor-id="categorising-buildings-within-the-iso-areas">2.2.2 <strong>Categorising buildings within the iso areas</strong></h3>
+<p>Upon inspecting the attribute table of the <strong>buildings</strong> layer, we found that some of the buildings were not categorised properly i.e.&nbsp;Null values.</p>
+<p><img src="images/AT1.jpg" class="img-fluid"></p>
+<p>Thus, we used Google street View as a reference and re-categorised these buildings.</p>
+<section id="creating-a-new-field-called-class-for-the-buildings-within-the-iso-area" class="level4">
+<h4 class="anchored" data-anchor-id="creating-a-new-field-called-class-for-the-buildings-within-the-iso-area"><strong>2.2.2.1 Creating a new field called class for the buildings within the iso area</strong></h4>
+<p>From the attribute table, we clicked on the <strong>toggle editing mode</strong> to create a <strong>New field</strong></p>
+<ul>
+<li><p>For <strong>Name</strong>, type 'class'</p></li>
+<li><p>For <strong>Type</strong>, select Text (string)</p></li>
+<li><p>For <strong>Length</strong>, select 30</p></li>
+<li><p>Click <strong>OK</strong></p></li>
+</ul>
+</section>
+<section id="identifying-buildings-within-the" class="level4">
+<h4 class="anchored" data-anchor-id="identifying-buildings-within-the">**2.2.2.2 Identifying buildings within the</h4>
+<p>iso-areas**</p>
+<p>Import <strong>OpenStreetMap</strong> layer into QGIS.</p>
+<p>Using Google Street view as a reference, we can compare and determine what class each building should be.</p>
+</section>
+<section id="categorising-the-buildings-within-the" class="level4">
+<h4 class="anchored" data-anchor-id="categorising-the-buildings-within-the">**2.2.2.3 Categorising the buildings within the</h4>
+<p>Iso Area**</p>
+<p>Select the buildings to be classed and open the attribute table. Select the <strong>Open field calculator</strong> symbol and check <strong>Update existing field</strong> Click on the dropdown arrow and select <strong>class</strong>, then in the Expression Pane, type the correct class. The classifications we have decided on are:</p>
+<ul>
+<li><p>Private Residential</p></li>
+<li><p>Business</p></li>
+<li><p>Civic</p></li>
+<li><p>Education</p></li>
+<li><p>Others</p></li>
+<li><p>Public Residential</p></li>
+<li><p>Religious</p></li>
+</ul>
+<p>This will update all selected features to the correct class.</p>
+</section>
+</section>
+</section>
+<section id="preparation-of-rail-stations" class="level2">
+<h2 class="anchored" data-anchor-id="preparation-of-rail-stations"><strong>2.3 Preparation of Rail Stations</strong></h2>
+<p>Using the steps learnt from the previous section, import Rail Stations data(master-plan-2019-rail-station-layer) into QGIS. The rail stations data contains the all the MRT station in Singapore.</p>
+<p>&nbsp;</p>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section">**2.6.1&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+<p>Extracting TEL Stage 4 stations**</p>
+<p>a)&nbsp;&nbsp;&nbsp; Under the Layers panel, right click on <strong>G_MP19_RAIL_STN_PL</strong>à <strong>Open Attribute Table</strong></p>
+<p>![Table</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image038.png){alt=“Table</p>
+<p>Description automatically generated”}</p>
+<p>b)&nbsp;&nbsp;&nbsp; Click on <strong>Select features using an expression</strong> ![A picture containing text</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image039.jpg){alt=“A picture containing text</p>
+<p>Description automatically generated”}&nbsp;icon. The <strong>Select by Expression</strong> dialog window will appear.</p>
+<p>c)&nbsp;&nbsp;&nbsp;&nbsp; At the upper left corner of the window, click on the <strong>Expression</strong> tab.</p>
+<p>ii.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Under the expression pane, key in the following:</p>
+<p><strong>“Name”&nbsp; =&nbsp; ‘FOUNDERS’’ MEMORIAL’ or&nbsp; “Name”&nbsp; =&nbsp; ‘TANJONG RHU’ or&nbsp; “Name”&nbsp; = &nbsp;‘KATONG PARK’ or&nbsp; “Name”&nbsp; =&nbsp; ‘TANJONG KATONG’ or&nbsp; “Name”&nbsp; =&nbsp; ‘MARINE PARADE’ or&nbsp; “Name”&nbsp; =&nbsp; ‘MARINE TERRACE’ or&nbsp; “Name”&nbsp; =&nbsp; ‘SIGLAP’ or&nbsp; “Name”&nbsp; =&nbsp; ‘BAYSHORE’</strong></p>
+<p>The query statement in the Expression pane should look similar to this.</p>
+<p>![Graphical user interface, application</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image041.png){alt=“Graphical user interface, application</p>
+<p>Description automatically generated”}</p>
+<p>d)&nbsp;&nbsp;&nbsp; &nbsp;Click on <strong>Select Features</strong> button and then <strong>close</strong> the window.</p>
+<p>e)&nbsp;&nbsp;&nbsp; Using the steps learnt in the previous sections, <strong>save the selected features</strong> in a new GIS file which is in GeoPackage format. Call the layer <strong>TEL4_stations</strong> . The layer should look similar to this.</p>
+<p>f)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next, remove the original <em>G_MP19_RAIL_STN_PL</em> layer from the QGIS project.</p>
+<p>&nbsp;</p>
+</section>
+<section id="adding-entrancesexits" class="level3">
+<h3 class="anchored" data-anchor-id="adding-entrancesexits">**2.6.2&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Adding Entrances/Exits</h3>
+<p>to the TEL stage 4 stations**</p>
+<section id="creating" class="level4">
+<h4 class="anchored" data-anchor-id="creating">**2.6.2.1 Creating</h4>
+<p>a new entrance/exit layer**</p>
+<p>&nbsp;</p>
+<p>a)&nbsp;&nbsp; Go to <strong>Layerà Create LayeràNew Shapefile Layer</strong></p>
+<p>b)&nbsp;&nbsp; For file name, navigate to the Geopackage folder and name the layer MRT Station Entrance Stage 4.</p>
+<p>c)&nbsp;&nbsp;&nbsp; For Geometry type, select <strong>Point</strong> from the dropdown arrow.</p>
+<p>d)&nbsp;&nbsp; Change the CRS projection system back to <strong>EPSG 3412.</strong></p>
+<p>e)&nbsp;&nbsp; For New field, type <strong>STN_N.</strong></p>
+<p>f)&nbsp;&nbsp;&nbsp;&nbsp; For Type, select <strong>text</strong></p>
+<p>g)&nbsp;&nbsp; Click on <strong>Add to Fields List</strong></p>
+<p>A new row will be added.</p>
+<p>![Graphical user interface, text, application, email</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image043.png){alt=“Graphical user interface, text, application, email</p>
+<p>Description automatically generated”}</p>
+<p>Using the same steps, add a new row where Name= <strong>EXIT_N</strong> and Type= <strong>integer</strong></p>
+<p>Click on <strong>OK</strong></p>
+</section>
+<section id="adding-points-to" class="level4">
+<h4 class="anchored" data-anchor-id="adding-points-to">**2.6.2.2 Adding points to</h4>
+<p>TEL Stage 4 MRT stations**</p>
+<p>a)&nbsp;&nbsp; Click on the toggle editing mode ![Text, icon</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image045.png){alt=“Text, icon</p>
+<p>Description automatically generated”}</p>
+<p>b)&nbsp;&nbsp; Click on the Add Point Feature ![Icon</p>
+<p>Description automatically generated with medium confidence](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image047.png){alt=“Icon</p>
+<p>Description automatically generated with medium confidence”}</p>
+<p>c)&nbsp;&nbsp;&nbsp; Using the station picture in Figure 1 of Founders' Memorial in <a href="https://www.lta.gov.sg/content/ltagov/en/upcoming_projects/rail_expansion/thomson_east_coast_line.html">LTA website</a> as a reference, manually click on the Founders memorial polygon to add the points.</p>
+<p>![Diagram</p>
+<p>Description automatically generated with low confidence](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image049.png){alt=“Diagram</p>
+<p>Description automatically generated with low confidence”}</p>
+<p>Figure 1</p>
+<p>d)&nbsp;&nbsp; A dialog window will appear.</p>
+<p>e)&nbsp;&nbsp; For <strong>id</strong>, type <strong>1</strong>. For <strong>STN_N</strong>, type <strong>FOUNDERS' MEMORIAL</strong>. For <strong>EXIT_N</strong> , type <strong>1</strong>.</p>
+<p>![Graphical user interface, application</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image051.png){alt=“Graphical user interface, application</p>
+<p>Description automatically generated”}</p>
+<p>f)&nbsp;&nbsp;&nbsp;&nbsp; For the second exit, for id, type 2. For <strong>STN_N</strong>, type <strong>FOUNDERS' MEMORIAL.</strong> For <strong>EXIT_N</strong> , type <strong>2</strong>.</p>
+<p>g)&nbsp;&nbsp; Click on the toggle editing mode.</p>
+<p>![Text</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image053.png){alt=“Text</p>
+<p>Description automatically generated”}</p>
+<p>d)&nbsp;&nbsp;&nbsp; Click <strong>save</strong>.</p>
+<p>DIY: Repeat the same steps for the entrances/exits of the other MRT stations. Use the TEL stage 4 entrance/exits in the <a href="https://www.lta.gov.sg/content/ltagov/en/upcoming_projects/rail_expansion/thomson_east_coast_line.html">LTA website</a> as a reference.</p>
+<p>Note: The id is the nth MRT entrances/exits of all where n&gt;0. The EXIT_N represents the kth entrance/exit of that MRT station where K&gt;0.</p>
+<p>&nbsp;</p>
+<p>Using the steps learnt from the previous section, save the layer in Geopackage format. Call the layer <strong>MRT Station Entrance Stage 4</strong>.</p>
+<p>&nbsp;</p>
+<p>![Map</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image055.png){alt=“Map</p>
+<p>Description automatically generated”}</p>
+<p>&nbsp;</p>
+</section>
+</section>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1">**2.7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+<p>Preparation of ISO-AREAS of 800m with contour lines of 200m**</p>
+<p>Now we will be implementing <strong>Iso-Area as Polygons (from Layer)</strong> as a way to delineate the catchment areas to derive the accessibility to the TEL Stage 4 MRT stations</p>
+<p>&nbsp;</p>
+<section id="section-2" class="level3">
+<h3 class="anchored" data-anchor-id="section-2">**2.7.1&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+<p>Creating ISO AREAS**</p>
+<p>DIY: Using the steps learnt previously, select the entrance/exit points of FOUNDERS' MEMORIAL</p>
+<p>a)&nbsp;&nbsp; In the menu bar, go to <strong>Processing</strong>à<strong>toolbox</strong>.</p>
+<p>b)&nbsp;&nbsp; In toolbox, click on the dropdown arrow beside <strong>QNEAT3</strong></p>
+<p>c)&nbsp;&nbsp;&nbsp; Click on the dropdown arrow beside <strong>Iso-Areas</strong>.</p>
+<p>![A picture containing graphical user interface</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image057.png){alt=“A picture containing graphical user interface</p>
+<p>Description automatically generated”}</p>
+<p>d)&nbsp;&nbsp; Double click on <strong>Iso-Area as Polygons (from Layer)</strong></p>
+<p>e)&nbsp;&nbsp; The dialog window for <strong>Iso-Area as Polygons (from Layer)</strong></p>
+<p>will appear.</p>
+<p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For&nbsp;<strong>Vector layer representing network</strong>, select&nbsp;<em>roads except motorway</em>&nbsp;from the drop-down list.</p>
+<p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For&nbsp;<strong>Start Points</strong>, select&nbsp;<em>MRT Station Entrance Stage 4</em>&nbsp;from the drop-down list</p>
+<p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For&nbsp;<strong>Unique Point ID field</strong>, leave it as fid</p>
+<p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For&nbsp;<strong>Size of Iso-Area (distance or time value)</strong>, type&nbsp;<em>800</em>.</p>
+<p><em>·</em> For&nbsp;<strong>Contour Interval</strong>, type&nbsp;<em>200</em></p>
+<p>Keep the rest of the entries as default.</p>
+<p>Your screen should look similar to the screenshot below.</p>
+<p>![Graphical user interface, text, application</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image059.png){alt=“Graphical user interface, text, application</p>
+<p>Description automatically generated”}</p>
+<p>When you are ready to run the function, click on <strong>run</strong></p>
+<p>When the process completed, two temporary layers namely:&nbsp;<code>Output Polygon</code>&nbsp;and&nbsp;<code>Output Interpolation</code>&nbsp;will be added onto Layers panel and display on QGIS View window.</p>
+<p>![Diagram</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image061.png){alt=“Diagram</p>
+<p>Description automatically generated”}</p>
+<p>Using the steps learnt from the previous section, save the temporary Output Polygon layer in Geopackage format. Call the layer <strong>FM_ISO</strong>. Remove the original temporary Output Polygon layer and the Output interpolation raster layer.</p>
+<p>&nbsp;</p>
+<p>![Diagram</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image063.png){alt=“Diagram</p>
+<p>Description automatically generated”}</p>
+</section>
+<section id="changing-the-interval-size-of-the-iso" class="level3">
+<h3 class="anchored" data-anchor-id="changing-the-interval-size-of-the-iso">**2.7.2 Changing the interval size of the iso</h3>
+<p>areas**</p>
+<p>a)&nbsp;&nbsp; Right click on <strong>FM_ISO</strong> Layer.</p>
+<p>b)&nbsp;&nbsp; Click on <strong>Properties</strong></p>
+<p>c)&nbsp;&nbsp;&nbsp; Go to the <strong>Symbology</strong> tab</p>
+<p>d)&nbsp;&nbsp; Select <strong>Graduated</strong></p>
+<p>e)&nbsp;&nbsp; For <strong>value</strong>, select <strong>cost_level</strong></p>
+<p>f)&nbsp;&nbsp;&nbsp;&nbsp; Change the colour ramp to a suitable colour range and check <strong>Invert colour ramp</strong></p>
+<p>g)&nbsp;&nbsp; For <strong>mode</strong> select <strong>Fixed Interval</strong></p>
+<p>h)&nbsp;&nbsp; Change the <strong>interval size</strong> to <strong>199</strong></p>
+<p><img src="file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image065.png" class="img-fluid"></p>
+<p>i)&nbsp;&nbsp;&nbsp;&nbsp; Once ready, click on <strong>Apply</strong> then <strong>OK</strong></p>
+<p>![Graphical user interface, diagram</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image067.png){alt=“Graphical user interface, diagram</p>
+<p>Description automatically generated”}</p>
+<p>&nbsp;</p>
+<p>Click on <strong>Save</strong> then click on the <strong>Deselect Features from All Layers</strong></p>
+<p>&nbsp;![A picture containing funnel chart</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image069.png){alt=“A picture containing funnel chart</p>
+<p>Description automatically generated”}</p>
+<p>&nbsp;</p>
+<p>DIY: Using the steps learnt previously, create the iso areas for the remaining entrances/exits of the other MRT stations and change the intervals. Remember to save the individual Iso areas as Geopackage format.</p>
+<p>&nbsp;</p>
+<p>![Map</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image071.png){alt=“Map</p>
+<p>Description automatically generated”}</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</section>
+</section>
+<section id="extracting-buildings-within-the-iso-areas" class="level2">
+<h2 class="anchored" data-anchor-id="extracting-buildings-within-the-iso-areas"><strong>2.8 Extracting buildings within the iso areas</strong></h2>
+<p>Do not use clipped as the buildings may get 'chopped' off</p>
+<p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; From the menu bar, select the <strong>Select by Location</strong> ![A picture containing graphical user interface</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image073.png){alt=“A picture containing graphical user interface</p>
+<p>Description automatically generated”}</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Select by Location</strong> dialog window appears</p>
+<p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For <em>Select features from</em>, select TEL- buildings from the dropdown arrow</p>
+<p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Check the <em>intersect</em> box</p>
+<p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For <em>By comparing to the features from</em>, select FM_ISO from the dropdown arrow</p>
+<p><strong>Select by Location</strong> dialog window should look similar to this</p>
+<p>&nbsp;</p>
+<p>![Graphical user interface</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image075.png){alt=“Graphical user interface</p>
+<p>Description automatically generated”}</p>
+<p>&nbsp;</p>
+<p>When you're ready, click on the <strong>Run</strong> button</p>
+<p>Once done, click on <strong>Close</strong></p>
+<p>&nbsp;</p>
+<p>Your screen should look similar to this.</p>
+<p>![Diagram</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image077.png){alt=“Diagram</p>
+<p>Description automatically generated”}</p>
+<p>&nbsp;</p>
+<p>DIY: Using the steps you had learned, save the&nbsp;<code>selected features</code> into GeoPackage, call the data layer&nbsp;<code>FM_buildings</code>.</p>
+<p>&nbsp;</p>
+<p>DIY: Using the steps you had learned, extract the buildings within the remaining individual iso areas. Save them into GeoPackage format</p>
+<p>&nbsp;</p>
+<p><img src="file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image079.png" class="img-fluid"></p>
+<p>&nbsp;</p>
+</section>
+<section id="categorising-buildings-within-the-iso" class="level2">
+<h2 class="anchored" data-anchor-id="categorising-buildings-within-the-iso">**2.9 Categorising buildings within the iso</h2>
+<p>areas**</p>
+<p>Some of the buildings were not categorised properly i.e.&nbsp;Null values. Thus, we must use Google street View as a reference and re-categorise these buildings.</p>
+<p>&nbsp;</p>
+<section id="creating-a-new-field-called-class-for" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-new-field-called-class-for">**2.9.1 Creating a new field called class for</h3>
+<p>the buildings within the iso area**</p>
+<p>a)&nbsp;&nbsp; Right click on the <strong>FM_buildings</strong> layer</p>
+<p>b)&nbsp;&nbsp; Select <strong>Open Attribute Table</strong></p>
+<p>c)&nbsp;&nbsp;&nbsp; Click on the <strong>toggle editing mode</strong> ![Icon</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image081.png){alt=“Icon</p>
+<p>Description automatically generated”}</p>
+<p>d)&nbsp;&nbsp; Click on <strong>New field</strong> ![Graphical user interface</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image083.png){alt=“Graphical user interface</p>
+<p>Description automatically generated”}</p>
+<p>&nbsp;</p>
+<p>New field dialog window appears</p>
+<p>For <strong>Name</strong>, type 'class'</p>
+<p>For <strong>Type</strong>, select Text (string)</p>
+<p>For <strong>Length</strong>, select 30</p>
+<p>![Graphical user interface, text, application</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image085.png){alt=“Graphical user interface, text, application</p>
+<p>Description automatically generated”}</p>
+<p>&nbsp;</p>
+<p>Click <strong>OK</strong></p>
+<p>&nbsp;</p>
+<p>Notice a new column is added</p>
+<p>&nbsp;</p>
+<p>![Table</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image087.png){alt=“Table</p>
+<p>Description automatically generated”}</p>
+<p>&nbsp;</p>
+<p>Click on the <strong>toggle editing mode</strong> again to <strong>save</strong>.</p>
+<p>&nbsp;</p>
+</section>
+<section id="identifying-buildings-within-the-1" class="level3">
+<h3 class="anchored" data-anchor-id="identifying-buildings-within-the-1">**2.9.3 Identifying buildings within the</h3>
+<p>iso-areas**</p>
+<p>&nbsp;</p>
+<p>Import <strong>OpenStreetMap</strong> layer into QGIS</p>
+<p>&nbsp;</p>
+<p>![Map</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image089.png){alt=“Map</p>
+<p>Description automatically generated”}</p>
+<p>Figure 2</p>
+<p>&nbsp;</p>
+<p><img src="file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image091.png" class="img-fluid"></p>
+<p>Figure 3</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Using google street view as a reference as depicted in figure 3, one can say that the buildings that are in Costa Rhu that are within the iso area of Founders' Memorial are <strong>Private residences</strong>.</p>
+<p>&nbsp;</p>
+</section>
+<section id="categorising-the-buildings-within-the-1" class="level3">
+<h3 class="anchored" data-anchor-id="categorising-the-buildings-within-the-1">**2.9.4 Categorising the buildings within the</h3>
+<p>Iso Area**</p>
+<p>a)&nbsp;&nbsp;&nbsp; Using the steps learnt earlier, select the buildings in the blue circle as shown in Figure 2.</p>
+<p>b)&nbsp;&nbsp;&nbsp; Using the steps learnt earlier, open the attribute table of FM_buildings layer</p>
+<p>c)&nbsp;&nbsp;&nbsp;&nbsp; Select the <strong>Open field calculator</strong> symbol ![Diagram</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image093.png){alt=“Diagram</p>
+<p>Description automatically generated”}</p>
+<p>d)&nbsp;&nbsp;&nbsp; Check the <strong>Update existing field</strong></p>
+<p>e)&nbsp;&nbsp;&nbsp; Click on the dropdown arrow and select <strong>class</strong></p>
+<p>f)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In the Expression Pane, type <strong>'Private Residential'</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>![Graphical user interface, application</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image095.png){alt=“Graphical user interface, application</p>
+<p>Description automatically generated”}</p>
+<p>g)&nbsp;&nbsp;&nbsp; Click on <strong>OK</strong></p>
+<p>Notice now the class of all the selected features have now been updated to <strong>Private Residential</strong></p>
+<p>![Table</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image097.png){alt=“Table</p>
+<p>Description automatically generated”}</p>
+<p>h)&nbsp;&nbsp;&nbsp; Click on the <strong>toggle editing mode</strong> to save</p>
+<p>i)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Close the attribute table</p>
+<p>j)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Click on <strong>Deselect features</strong></p>
+<p>&nbsp;</p>
+</section>
+<section id="changing-the-colour-scheme-of-the" class="level3">
+<h3 class="anchored" data-anchor-id="changing-the-colour-scheme-of-the">**2.9.5 Changing the colour scheme of the</h3>
+<p>buildings**</p>
+<p>a)&nbsp;&nbsp; Right click on <strong>FM_buildings</strong> Layer.</p>
+<p>b)&nbsp;&nbsp; Click on <strong>Properties</strong></p>
+<p>c)&nbsp;&nbsp;&nbsp; Go to the <strong>Symbology</strong> tab</p>
+<p>d)&nbsp;&nbsp; Select <strong>Categorized</strong></p>
+<p>e)&nbsp;&nbsp; For <strong>value</strong>, select <strong>class</strong></p>
+<p>f)&nbsp;&nbsp;&nbsp;&nbsp; Click on <strong>Apply</strong></p>
+<p>![Graphical user interface, text, application</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image099.png){alt=“Graphical user interface, text, application</p>
+<p>Description automatically generated”}</p>
+<p>g)&nbsp;&nbsp; Click on the dropdown arrow of Symbol and change the colour to ![Map</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image101.png){alt=“Map</p>
+<p>Description automatically generated”}</p>
+<p>h)&nbsp;&nbsp; Click on <strong>Apply</strong> again then click on <strong>OK</strong></p>
+<p>![Map</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image103.png){alt=“Map</p>
+<p>Description automatically generated”}</p>
+<p>Remember to <strong>save</strong> the project</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>DIY: Using the steps learnt previously, i.e.&nbsp;<strong>identifying, categorising and changing the colour scheme</strong>, repeat the steps on the remaining buildings that falls within the other iso areas.</p>
+<p>&nbsp;</p>
+<p>Note: The only <strong>values</strong> that <strong>class</strong> will take are: '<strong>Private</strong> <strong>Residential</strong>' &nbsp;, '<strong>Business'</strong> , '<strong>Civic'</strong> , '<strong>Education'</strong> , '<strong>Others'</strong> , '<strong>Public</strong> <strong>Residential'</strong> and '<strong>Religious'</strong></p>
+<p>Note: When changing their colour schemes, assign the values of the class to the following colours as per Figure 4</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>![Map</p>
+<p>Description automatically generated](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image105.png){alt=“Map</p>
+<p>Description automatically generated”}</p>
+<p>Figure 4</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Your final screen display should look similar to the screenshot below.</p>
+<p>(Yellow points are the entrances/exits of the MRT stations)</p>
+<p>&nbsp;</p>
+<p>![A map of a city</p>
+<p>Description automatically generated with medium confidence](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image107.png){alt=“A map of a city</p>
+<p>Description automatically generated with medium confidence”}</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
