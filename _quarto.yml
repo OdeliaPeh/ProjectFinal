@@ -4,9 +4,12 @@ project:
 website:
   title: "Group 10"
   navbar:
-    left:
+    right:
       - href: index.qmd
         text: Home
+      - href: people.qmd
+        text: The Team
+    left:
       - href: about.qmd
         text: Overview
       - href: methods.qmd
@@ -18,7 +21,7 @@ website:
 
 format:
   html:
-    theme: journal
+    theme: zephyr
     css: styles.css
     toc: true
 

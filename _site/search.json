@@ -24,8 +24,15 @@
     "objectID": "about.html#the-data",
     "href": "about.html#the-data",
     "title": "Overview",
-    "section": "The data",
-    "text": "The data\nThe following data sets will be used\n\nMaster Plan 2019 Subzone Boundary (No Sea)\nMaster Plan 2019 Rail Station layer\nRoads and Buildings shp data from OpenStreetMaps (OSM) data sets"
+    "section": "The Data",
+    "text": "The Data\nThe following data sets will be used\n\nMaster Plan 2019 Subzone Boundary (No Sea)\nMaster Plan 2019 Rail Station layer\nRoads and Buildings shp data from OpenStreetMaps (OSM) data sets"
+  },
+  {
+    "objectID": "about.html#project-timeline",
+    "href": "about.html#project-timeline",
+    "title": "Overview",
+    "section": "Project Timeline",
+    "text": "Project Timeline"
   },
   {
     "objectID": "index.html",
@@ -39,7 +46,7 @@
     "href": "methods.html",
     "title": "Methodology",
     "section": "",
-    "text": "A buffer area is the most common way to delineate a catchment area. It measures a Euclidean distance away from the point given. However, this convenience comes with some issue. Using Euclidean distances is essentially a straight line and can be misleading and impractical on a map.\nA more credible and realistic approach to delineate the catchment area would be to use network distance i.e., the shortest distance approach. The method that provides this approach is Iso-Areas as Polygons (from Layer). The iso areas are mapped onto the walkable paths by Singaporeans making it more accurate.\n\n\n\n\n\nIn reality, a person cannot always travel in a straight line towards their destination but will have to turn at bends and curves depending on their walking paths."
+    "text": "Click here to view the full step-by-step guide. Continue scrolling to see an abridged version."
   },
   {
     "objectID": "methods.html#downloading-geospatial-data",
@@ -82,12 +89,5 @@
     "title": "Methodology",
     "section": "2.5 Extracting buildings within the iso areas",
     "text": "2.5 Extracting buildings within the iso areas\nDo not use clipped as the buildings may get ‘chopped’ off\nFrom the menu bar, select the Select by Location\n\nFor Select features from, select TEL- buildings from the dropdown arrow\nCheck the intersect box\nFor By comparing to the features from, select FM_ISO from the dropdown arrow\n\nAfter running it, save the layer as {Station initials}_buildings.\nRepeat the process for all stations."
-  },
-  {
-    "objectID": "methods.html#final-map-and-geoweb",
-    "href": "methods.html#final-map-and-geoweb",
-    "title": "Methodology",
-    "section": "Final Map and Geoweb",
-    "text": "Final Map and Geoweb\nThis will be what the final map looks like. View the geoweb version here."
   }
 ]

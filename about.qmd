@@ -24,7 +24,7 @@ The Project tasks are as follows:
 
 In line with this vision, our main area of focus is to determine the accessibility of residential areas of the Thomson East Coast Stage 4 MRT station through proximity analysis. From the results we have attained, we hope to recommend how best to support the new MRT stations to serve the mass public more efficiently and ensure that public transport remain convenient and accessible to Singaporeans.use
 
-## The data
+## The Data
 
 The following data sets will be used
 
@@ -33,3 +33,5 @@ The following data sets will be used
 -   [Master Plan 2019 Rail Station layer](https://data.gov.sg/dataset/master-plan-2019-rail-station-layer)
 
 -   [Roads and Buildings shp data from OpenStreetMaps (OSM) data sets](https://download.geofabrik.de/asia/malaysia-singapore-brunei.html)
+
+## Project Timeline

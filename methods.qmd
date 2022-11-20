@@ -3,7 +3,11 @@ title: "Methodology"
 editor: visual
 ---
 
-## Consideration: Iso - Area vs Buffer
+# Step-by-step Guide
+
+Click [here](https://drive.google.com/file/d/1WY3_OyvdyfxyNb6Y05X2dlYpWiBD4mqr/view?usp=sharing) to view the full step-by-step guide. Continue scrolling to see an abridged version.
+
+# Consideration: Iso - Area vs Buffer
 
 A buffer area is the most common way to delineate a catchment area. It measures a Euclidean distance away from the point given. However, this convenience comes with some issue. Using Euclidean distances is essentially a straight line and can be misleading and impractical on a map.
 
@@ -13,7 +17,7 @@ A more credible and realistic approach to delineate the catchment area would be 
 
 In reality, a person cannot always travel in a straight line towards their destination but will have to turn at bends and curves depending on their walking paths.
 
-# **1.0: Data Collection**
+# 1.0: Data Collection
 
 ## **1.1 Downloading geospatial data**
 
@@ -27,7 +31,7 @@ Next, download geospatial data from [geofabrick](https://download.geofabrik.de/)
 
 -   Roads and Buildings data from OpenStreetMap(OSM) data sets
 
-# **2.0 Data Preparation, Data Cleaning and QGIS**
+# 2.0 Data Preparation, Data Cleaning and QGIS
 
 ## **2.1 Preparation of Road Network Layer**
 
@@ -278,3 +282,5 @@ Repeat the process for all stations.
 This will be what the final map looks like. View the geoweb version [here](https://g1t10project.netlify.app).
 
 ![](images/Map3.jpg){fig-align="center"}
+
+# 
