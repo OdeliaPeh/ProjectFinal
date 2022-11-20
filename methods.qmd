@@ -119,147 +119,77 @@ Click on **Select features using an expression** and key in the following query 
 
 **"Name"  =  'FOUNDERS'' MEMORIAL' or  "Name"  =  'TANJONG RHU' or  "Name"  =  'KATONG PARK' or  "Name"  =  'TANJONG KATONG' or  "Name"  =  'MARINE PARADE' or  "Name"  =  'MARINE TERRACE' or  "Name"  =  'SIGLAP' or  "Name"  =  'BAYSHORE'**
 
-d)     Click on **Select Features** button and then **close** the window.
+Click on **Select Features** and then **close** the window. Save the selected features as **TEL4_stations**.
 
-e)    Using the steps learnt in the previous sections, **save the selected features** in a new GIS file which is in GeoPackage format. Call the layer **TEL4_stations** . The layer should look similar to this.
+### 2.3.2 Adding Entrances/Exits to the TEL stage 4 stations
 
-f)      Next, remove the original *G_MP19_RAIL_STN_PL* layer from the QGIS project.
+#### 2.3.2.1 Creating a new entrance/exit layer
 
- 
+We need to create a point layer for MRT station entrances in order to have an end point for network creation later.
 
-### \*\*2.6.2      Adding Entrances/Exits
+a\) Go to **Layer --\> Create Layer --\>New Shapefile Layer**
 
-to the TEL stage 4 stations\*\*
+b\) For file name, navigate to the Geopackage folder and name the layer MRT Station Entrance Stage 4.
 
-#### \*\*2.6.2.1 Creating
+c\) For Geometry type, select **Point** from the dropdown arrow.
 
-a new entrance/exit layer\*\*
+d\) Change the CRS projection system back to **EPSG 3412.**
 
- 
+Two new fields should be added, STN_N and EXIT_N.
 
-a)   Go to **Layerà Create LayeràNew Shapefile Layer**
+a\) To add a new field, type **STN_N.**
 
-b)   For file name, navigate to the Geopackage folder and name the layer MRT Station Entrance Stage 4.
+b\) For Type, select **text**
 
-c)    For Geometry type, select **Point** from the dropdown arrow.
-
-d)   Change the CRS projection system back to **EPSG 3412.**
-
-e)   For New field, type **STN_N.**
-
-f)     For Type, select **text**
-
-g)   Click on **Add to Fields List**
+c\) Click on **Add to Fields List**
 
 A new row will be added.
-
-!\[Graphical user interface, text, application, email
-
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image043.png){alt="Graphical user interface, text, application, email
-
-Description automatically generated"}
 
 Using the same steps, add a new row where Name= **EXIT_N** and Type= **integer**
 
 Click on **OK**
 
-#### \*\*2.6.2.2 Adding points to
+#### 2.3.2.2 Adding points to TEL Stage 4 MRT stations
 
-TEL Stage 4 MRT stations\*\*
+a\) Click on the toggle editing mode
 
-a)   Click on the toggle editing mode !\[Text, icon
+b\) Click on the Add Point Feature
 
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image045.png){alt="Text, icon
-
-Description automatically generated"}
-
-b)   Click on the Add Point Feature !\[Icon
-
-Description automatically generated with medium confidence\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image047.png){alt="Icon
-
-Description automatically generated with medium confidence"}
-
-c)    Using the station picture in Figure 1 of Founders' Memorial in [LTA website](https://www.lta.gov.sg/content/ltagov/en/upcoming_projects/rail_expansion/thomson_east_coast_line.html) as a reference, manually click on the Founders memorial polygon to add the points.
-
-!\[Diagram
-
-Description automatically generated with low confidence\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image049.png){alt="Diagram
-
-Description automatically generated with low confidence"}
-
-Figure 1
+c\) Using the station picture in Figure 1 of Founders' Memorial in [LTA website](https://www.lta.gov.sg/content/ltagov/en/upcoming_projects/rail_expansion/thomson_east_coast_line.html) as a reference, manually click on the Founders memorial polygon to add the points.
 
 d)   A dialog window will appear.
 
 e)   For **id**, type **1**. For **STN_N**, type **FOUNDERS' MEMORIAL**. For **EXIT_N** , type **1**.
 
-!\[Graphical user interface, application
-
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image051.png){alt="Graphical user interface, application
-
-Description automatically generated"}
-
 f)     For the second exit, for id, type 2. For **STN_N**, type **FOUNDERS' MEMORIAL.** For **EXIT_N** , type **2**.
 
 g)   Click on the toggle editing mode.
 
-!\[Text
-
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image053.png){alt="Text
-
-Description automatically generated"}
-
 d)    Click **save**.
 
-DIY: Repeat the same steps for the entrances/exits of the other MRT stations. Use the TEL stage 4 entrance/exits in the [LTA website](https://www.lta.gov.sg/content/ltagov/en/upcoming_projects/rail_expansion/thomson_east_coast_line.html) as a reference.
+Repeat the same steps for the entrances/exits of the other MRT stations. Use the TEL stage 4 entrance/exits in the [LTA website](https://www.lta.gov.sg/content/ltagov/en/upcoming_projects/rail_expansion/thomson_east_coast_line.html) as a reference.
 
 Note: The id is the nth MRT entrances/exits of all where n\>0. The EXIT_N represents the kth entrance/exit of that MRT station where K\>0.
 
- 
+We saved the layer in Geopackage format. Call the layer **MRT Station Entrance Stage 4**.
 
-Using the steps learnt from the previous section, save the layer in Geopackage format. Call the layer **MRT Station Entrance Stage 4**.
-
- 
-
-!\[Map
-
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image055.png){alt="Map
-
-Description automatically generated"}
-
- 
-
-## \*\*2.7         
-
-Preparation of ISO-AREAS of 800m with contour lines of 200m\*\*
+## 2.4 Preparation of ISO-AREAS of 800m with contour lines of 200m
 
 Now we will be implementing **Iso-Area as Polygons (from Layer)** as a way to delineate the catchment areas to derive the accessibility to the TEL Stage 4 MRT stations
 
- 
+### 2.7.1 Creating ISO AREAS
 
-### \*\*2.7.1    
+Select the entrance/exit points of a single MRT station (eg. FOUNDERS' MEMORIAL)
 
-Creating ISO AREAS\*\*
-
-DIY: Using the steps learnt previously, select the entrance/exit points of FOUNDERS' MEMORIAL
-
-a)   In the menu bar, go to **Processing**à**toolbox**.
+a)   In the menu bar, go to **Processing** --\> **toolbox**.
 
 b)   In toolbox, click on the dropdown arrow beside **QNEAT3**
 
 c)    Click on the dropdown arrow beside **Iso-Areas**.
 
-!\[A picture containing graphical user interface
-
-Description automatically generated\](file:///C:/Users/odeli/AppData/Local/Temp/msohtmlclip1/01/clip_image057.png){alt="A picture containing graphical user interface
-
-Description automatically generated"}
-
 d)   Double click on **Iso-Area as Polygons (from Layer)**
 
-e)   The dialog window for **Iso-Area as Polygons (from Layer)**
-
-will appear.
+e)   The dialog window for **Iso-Area as Polygons (from Layer)** will appear.
 
 ·      For **Vector layer representing network**, select *roads except motorway* from the drop-down list.
 
