@@ -27,7 +27,7 @@ Next, download geospatial data from [geofabrick](https://download.geofabrik.de/)
 
 -   Roads and Buildings data from OpenStreetMap(OSM) data sets
 
-# **2.0 Data Preparation and Data Cleaning : OSM**
+# **2.0 Data Preparation, Data Cleaning and QGIS**
 
 ## **2.1 Preparation of Road Network Layer**
 
@@ -273,7 +273,7 @@ Repeat the process for all stations.
 
 ![](images/Map2.jpg){fig-align="center"}
 
-## Final Map and Geoweb
+# Final Map and Geoweb
 
 This will be what the final map looks like. View the geoweb version [here](https://g1t10project.netlify.app).
 
